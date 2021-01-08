@@ -13,40 +13,39 @@
 
   <body>
     <div id="bloc_page">
+      <nav>
+        <img src="images\logo\Reservia.png" alt="logo" id="logo" />
+        <ul>
+          <li><a href="#home">Hébergement</a></li>
+
+          <li><a href="#activités">Activités</a></li>
+
+          <li>
+            <a href="#"><span class="bold">S'inscrire</span></a>
+          </li>
+        </ul>
+      </nav>
+
       <header>
         <div id="titre_principal">
-          <div id="logo">
-            <img src="images\logo\Reservia.png" alt="logo" id="logo" />
-          </div>
           <h1>
             <strong>Trouvez votre hébergement pour des vacances de rêve</strong>
           </h1>
           <h2>En plein centre-ville ou en pleine nature</h2>
         </div>
-
-        <nav>
-          <ul>
-            <li><a href="#home">Hébergement</a></li>
-            <li><a href="#activités">Activités</a></li>
-            <li>
-              <a href="#"
-                ><strong><span>S'inscrire</span></strong></a
-              >
-            </li>
-          </ul>
-        </nav>
       </header>
 
       <div id="rechercher">
-        <form action="#">
-          <i class="fas fa-map-marker-alt fa-2x"></i>
-          <input type="text" />
-          <span
-            ><button type="submit">
-              <strong>Rechercher</strong>
-            </button></span
-          >
-        </form>
+        <i class="fas fa-map-marker-alt fa-1x"></i>
+        <input
+          type="text"
+          class="searchterm"
+          placeholder="Votre recherche..."
+        />
+
+        <button type="submit" class="searchbutton">
+          <strong>Rechercher</strong>
+        </button>
       </div>
 
       <div id="filtre">
