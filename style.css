@@ -111,7 +111,7 @@ input {
   width: 300px;
   padding: 0px 10px;
 }
-i {
+#rechercher i {
   align-self: center;
   padding: 0px 20px;
 }
@@ -126,9 +126,48 @@ i {
   overflow: hidden;
 }
 #filtre {
-  border: navy solid 3px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 10px;
 }
-
+.fltrebtn {
+  margin-left: 10px;
+  width: 600px;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+}
+.btn {
+  display: flex;
+  border-radius: 20px;
+  background-color: white;
+  height: 35px;
+  align-items: center;
+  overflow: hidden;
+  padding: 0;
+  outline: none;
+  border: #f2f2f2 solid 2px;
+}
+.btnText {
+  padding: 0px 10px;
+}
+.btn:active {
+  border: #0065fc solid 2px;
+}
+.btn:hover {
+  background-color: #deebff;
+}
+.btnIcon {
+  display: flex;
+  background: #deebff;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  width: 35px;
+  border-radius: 100%;
+  color: #0065fc;
+}
 #information {
   border: solid green 3px;
 }
