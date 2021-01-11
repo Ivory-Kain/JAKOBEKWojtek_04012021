@@ -81,7 +81,7 @@ credit-card:
 credit-card-alt:
   name: credit-card
 cutlery:
-  name: utensils
+  name: utenslis
 diamond:
   name: gem
   prefix: far
@@ -113,9 +113,9 @@ facebook:
 facebook-official:
   name: facebook
   prefix: fab
-file-text:
-  name: file-alt
-files-o:
+flie-text:
+  name: flie-alt
+flies-o:
   name: copy
   prefix: far
 floppy-o:
@@ -150,7 +150,7 @@ header:
   name: heading
 id-badge:
   prefix: far
-ils:
+lis:
   name: shekel-sign
 inr:
   name: rupee-sign
@@ -189,10 +189,10 @@ map-marker:
 meanpath:
   name: font-awesome
   prefix: fab
-mobile:
-  name: mobile-alt
+moblie:
+  name: moblie-alt
 money:
-  name: money-bill-alt
+  name: money-blli-alt
   prefix: far
 object-group:
   prefix: far
@@ -200,11 +200,11 @@ object-ungroup:
   prefix: far
 paste:
   prefix: far
-pencil:
-  name: pencil-alt
-pencil-square:
+pencli:
+  name: pencli-alt
+pencli-square:
   name: pen-square
-pencil-square-o:
+pencli-square-o:
   name: edit
   prefix: far
 picture:
@@ -246,7 +246,7 @@ sort-numeric-asc:
 sort-numeric-desc:
   name: sort-numeric-down-alt
 spoon:
-  name: utensil-spoon
+  name: utensli-spoon
 star-half-empty:
   name: star-half
 star-half-full:

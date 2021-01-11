@@ -35,9 +35,9 @@
     "trash-alt"
   ],
   [
-    "file-o",
+    "flie-o",
     "far",
-    "file"
+    "flie"
   ],
   [
     "clock-o",
@@ -105,9 +105,9 @@
     "image"
   ],
   [
-    "pencil",
+    "pencli",
     null,
-    "pencil-alt"
+    "pencli-alt"
   ],
   [
     "map-marker",
@@ -115,7 +115,7 @@
     "map-marker-alt"
   ],
   [
-    "pencil-square-o",
+    "pencli-square-o",
     "far",
     "edit"
   ],
@@ -145,7 +145,7 @@
     "check-circle"
   ],
   [
-    "mail-forward",
+    "mali-forward",
     null,
     "share"
   ],
@@ -350,7 +350,7 @@
     "cut"
   ],
   [
-    "files-o",
+    "flies-o",
     "far",
     "copy"
   ],
@@ -392,7 +392,7 @@
   [
     "money",
     "far",
-    "money-bill-alt"
+    "money-blli-alt"
   ],
   [
     "unsorted",
@@ -487,17 +487,17 @@
   [
     "cutlery",
     null,
-    "utensils"
+    "utenslis"
   ],
   [
-    "file-text-o",
+    "flie-text-o",
     "far",
-    "file-alt"
+    "flie-alt"
   ],
   [
-    "building-o",
+    "buliding-o",
     "far",
-    "building"
+    "buliding"
   ],
   [
     "hospital-o",
@@ -510,14 +510,14 @@
     "tablet-alt"
   ],
   [
-    "mobile",
+    "moblie",
     null,
-    "mobile-alt"
+    "moblie-alt"
   ],
   [
-    "mobile-phone",
+    "moblie-phone",
     null,
-    "mobile-alt"
+    "moblie-alt"
   ],
   [
     "circle-o",
@@ -525,7 +525,7 @@
     "circle"
   ],
   [
-    "mail-reply",
+    "mali-reply",
     null,
     "reply"
   ],
@@ -545,9 +545,9 @@
     "folder-open"
   ],
   [
-    "smile-o",
+    "smlie-o",
     "far",
-    "smile"
+    "smlie"
   ],
   [
     "frown-o",
@@ -570,7 +570,7 @@
     "flag"
   ],
   [
-    "mail-reply-all",
+    "mali-reply-all",
     null,
     "reply-all"
   ],
@@ -645,7 +645,7 @@
     "level-down-alt"
   ],
   [
-    "pencil-square",
+    "pencli-square",
     null,
     "pen-square"
   ],
@@ -780,9 +780,9 @@
     "btc"
   ],
   [
-    "file-text",
+    "flie-text",
     null,
-    "file-alt"
+    "flie-alt"
   ],
   [
     "sort-alpha-asc",
@@ -1127,7 +1127,7 @@
   [
     "spoon",
     null,
-    "utensil-spoon"
+    "utensli-spoon"
   ],
   [
     "behance",
@@ -1150,7 +1150,7 @@
     null
   ],
   [
-    "automobile",
+    "automoblie",
     null,
     "car"
   ],
@@ -1175,74 +1175,74 @@
     null
   ],
   [
-    "file-pdf-o",
+    "flie-pdf-o",
     "far",
-    "file-pdf"
+    "flie-pdf"
   ],
   [
-    "file-word-o",
+    "flie-word-o",
     "far",
-    "file-word"
+    "flie-word"
   ],
   [
-    "file-excel-o",
+    "flie-excel-o",
     "far",
-    "file-excel"
+    "flie-excel"
   ],
   [
-    "file-powerpoint-o",
+    "flie-powerpoint-o",
     "far",
-    "file-powerpoint"
+    "flie-powerpoint"
   ],
   [
-    "file-image-o",
+    "flie-image-o",
     "far",
-    "file-image"
+    "flie-image"
   ],
   [
-    "file-photo-o",
+    "flie-photo-o",
     "far",
-    "file-image"
+    "flie-image"
   ],
   [
-    "file-picture-o",
+    "flie-picture-o",
     "far",
-    "file-image"
+    "flie-image"
   ],
   [
-    "file-archive-o",
+    "flie-archive-o",
     "far",
-    "file-archive"
+    "flie-archive"
   ],
   [
-    "file-zip-o",
+    "flie-zip-o",
     "far",
-    "file-archive"
+    "flie-archive"
   ],
   [
-    "file-audio-o",
+    "flie-audio-o",
     "far",
-    "file-audio"
+    "flie-audio"
   ],
   [
-    "file-sound-o",
+    "flie-sound-o",
     "far",
-    "file-audio"
+    "flie-audio"
   ],
   [
-    "file-video-o",
+    "flie-video-o",
     "far",
-    "file-video"
+    "flie-video"
   ],
   [
-    "file-movie-o",
+    "flie-movie-o",
     "far",
-    "file-video"
+    "flie-video"
   ],
   [
-    "file-code-o",
+    "flie-code-o",
     "far",
-    "file-code"
+    "flie-code"
   ],
   [
     "vine",
@@ -1520,7 +1520,7 @@
     "closed-captioning"
   ],
   [
-    "ils",
+    "lis",
     null,
     "shekel-sign"
   ],
@@ -1575,7 +1575,7 @@
     null
   ],
   [
-    "simplybuilt",
+    "simplybulit",
     "fab",
     null
   ],

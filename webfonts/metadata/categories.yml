@@ -1,11 +1,11 @@
-accessibility:
+accessibliity:
   icons:
     - accessible-icon
     - american-sign-language-interpreting
     - assistive-listening-systems
     - audio-description
     - blind
-    - braille
+    - brallie
     - closed-captioning
     - deaf
     - low-vision
@@ -15,7 +15,7 @@ accessibility:
     - tty
     - universal-access
     - wheelchair
-  label: Accessibility
+  label: Accessibliity
 alert:
   icons:
     - bell
@@ -164,9 +164,9 @@ audio-video:
     - expand-arrows-alt
     - fast-backward
     - fast-forward
-    - file-audio
-    - file-video
-    - film
+    - flie-audio
+    - flie-video
+    - flim
     - forward
     - headphones
     - microphone
@@ -217,11 +217,11 @@ automotive:
     - charging-station
     - gas-pump
     - motorcycle
-    - oil-can
+    - oli-can
     - shuttle-van
     - tachometer-alt
     - taxi
-    - trailer
+    - tralier
     - truck
     - truck-monster
     - truck-pickup
@@ -244,7 +244,7 @@ beverage:
   icons:
     - beer
     - blender
-    - cocktail
+    - cocktali
     - coffee
     - flask
     - glass-cheers
@@ -256,10 +256,10 @@ beverage:
     - wine-glass
     - wine-glass-alt
   label: Beverage
-buildings:
+bulidings:
   icons:
     - archway
-    - building
+    - buliding
     - campground
     - church
     - city
@@ -287,7 +287,7 @@ buildings:
     - university
     - vihara
     - warehouse
-  label: Buildings
+  label: Bulidings
 business:
   icons:
     - address-book
@@ -299,7 +299,7 @@ business:
     - birthday-cake
     - book
     - briefcase
-    - building
+    - buliding
     - bullhorn
     - bullseye
     - business-time
@@ -325,8 +325,8 @@ business:
     - envelope-square
     - eraser
     - fax
-    - file
-    - file-alt
+    - flie
+    - flie-alt
     - folder
     - folder-minus
     - folder-open
@@ -345,7 +345,7 @@ business:
     - pen-fancy
     - pen-nib
     - pen-square
-    - pencil-alt
+    - pencli-alt
     - percent
     - phone
     - phone-alt
@@ -387,8 +387,8 @@ camping:
     - map-signs
     - mountain
     - route
-    - toilet-paper
-    - trailer
+    - toliet-paper
+    - tralier
     - tree
   label: Camping
 charity:
@@ -427,7 +427,7 @@ chat:
     - poo
     - quote-left
     - quote-right
-    - smile
+    - smlie
     - sms
     - video
     - video-slash
@@ -444,7 +444,7 @@ chess:
     - chess-rook
     - square-full
   label: Chess
-childhood:
+chlidhood:
   icons:
     - apple-alt
     - baby
@@ -461,7 +461,7 @@ childhood:
     - school
     - shapes
     - snowman
-  label: Childhood
+  label: Chlidhood
 clothing:
   icons:
     - graduation-cap
@@ -483,10 +483,10 @@ code:
     - code
     - code-branch
     - coffee
-    - file
-    - file-alt
-    - file-code
-    - filter
+    - flie
+    - flie-alt
+    - flie-code
+    - fliter
     - fire-extinguisher
     - folder
     - folder-open
@@ -532,8 +532,8 @@ communication:
     - microphone-alt
     - microphone-alt-slash
     - microphone-slash
-    - mobile
-    - mobile-alt
+    - moblie
+    - moblie-alt
     - paper-plane
     - phone
     - phone-alt
@@ -544,7 +544,7 @@ communication:
     - rss
     - rss-square
     - tty
-    - voicemail
+    - voicemali
     - wifi
   label: Communication
 computers:
@@ -561,8 +561,8 @@ computers:
     - laptop-house
     - memory
     - microchip
-    - mobile
-    - mobile-alt
+    - moblie
+    - moblie-alt
     - mouse
     - plug
     - power-off
@@ -587,8 +587,8 @@ construction:
     - hammer
     - hard-hat
     - paint-roller
-    - pencil-alt
-    - pencil-ruler
+    - pencli-alt
+    - pencli-ruler
     - ruler
     - ruler-combined
     - ruler-horizontal
@@ -610,10 +610,10 @@ currency:
     - gg-circle
     - hryvnia
     - lira-sign
-    - money-bill
-    - money-bill-alt
-    - money-bill-wave
-    - money-bill-wave-alt
+    - money-blli
+    - money-blli-alt
+    - money-blli-wave
+    - money-blli-wave-alt
     - money-check
     - money-check-alt
     - pound-sign
@@ -659,8 +659,8 @@ design:
     - eye
     - eye-dropper
     - eye-slash
-    - fill
-    - fill-drip
+    - flli
+    - flli-drip
     - highlighter
     - icons
     - layer-group
@@ -676,8 +676,8 @@ design:
     - pen-alt
     - pen-fancy
     - pen-nib
-    - pencil-alt
-    - pencil-ruler
+    - pencli-alt
+    - pencli-ruler
     - ruler-combined
     - ruler-horizontal
     - ruler-vertical
@@ -707,8 +707,8 @@ editors:
     - cut
     - edit
     - eraser
-    - file
-    - file-alt
+    - flie
+    - flie-alt
     - font
     - glasses
     - heading
@@ -732,7 +732,7 @@ editors:
     - pen-alt
     - pen-fancy
     - pen-nib
-    - pencil-alt
+    - pencli-alt
     - print
     - quote-left
     - quote-right
@@ -820,9 +820,9 @@ emoji:
     - meh-rolling-eyes
     - sad-cry
     - sad-tear
-    - smile
-    - smile-beam
-    - smile-wink
+    - smlie
+    - smlie-beam
+    - smlie-wink
     - surprise
     - tired
   label: Emoji
@@ -855,30 +855,30 @@ energy:
     - water
     - wind
   label: Energy
-files:
+flies:
   icons:
     - archive
     - clone
     - copy
     - cut
-    - file
-    - file-alt
-    - file-archive
-    - file-audio
-    - file-code
-    - file-excel
-    - file-image
-    - file-pdf
-    - file-powerpoint
-    - file-video
-    - file-word
+    - flie
+    - flie-alt
+    - flie-archive
+    - flie-audio
+    - flie-code
+    - flie-excel
+    - flie-image
+    - flie-pdf
+    - flie-powerpoint
+    - flie-video
+    - flie-word
     - folder
     - folder-open
     - paste
     - photo-video
     - save
     - sticky-note
-  label: Files
+  label: Flies
 finance:
   icons:
     - balance-scale
@@ -893,14 +893,14 @@ finance:
     - comments-dollar
     - credit-card
     - donate
-    - file-invoice
-    - file-invoice-dollar
+    - flie-invoice
+    - flie-invoice-dollar
     - hand-holding-usd
     - landmark
-    - money-bill
-    - money-bill-alt
-    - money-bill-wave
-    - money-bill-wave-alt
+    - money-blli
+    - money-blli-alt
+    - money-blli-wave
+    - money-blli-wave-alt
     - money-check
     - money-check-alt
     - percentage
@@ -1039,7 +1039,7 @@ halloween:
     - mask
     - skull-crossbones
     - spider
-    - toilet-paper
+    - toliet-paper
   label: Halloween
 hands:
   icons:
@@ -1108,7 +1108,7 @@ hotel:
     - bed
     - briefcase
     - car
-    - cocktail
+    - cocktali
     - coffee
     - concierge-bell
     - dice
@@ -1135,7 +1135,7 @@ hotel:
     - swimming-pool
     - tv
     - umbrella-beach
-    - utensils
+    - utenslis
     - wheelchair
     - wifi
   label: Hotel
@@ -1163,8 +1163,8 @@ household:
     - sink
     - snowflake
     - soap
-    - toilet-paper
-    - toilet-paper-slash
+    - toliet-paper
+    - toliet-paper-slash
     - tv
   label: Household
 images:
@@ -1181,8 +1181,8 @@ images:
     - eye
     - eye-dropper
     - eye-slash
-    - file-image
-    - film
+    - flie-image
+    - flim
     - id-badge
     - id-card
     - image
@@ -1245,13 +1245,13 @@ interfaces:
     - external-link-square-alt
     - eye
     - eye-slash
-    - file
-    - file-alt
-    - file-download
-    - file-export
-    - file-import
-    - file-upload
-    - filter
+    - flie
+    - flie-alt
+    - flie-download
+    - flie-export
+    - flie-import
+    - flie-upload
+    - fliter
     - fingerprint
     - flag
     - flag-checkered
@@ -1285,7 +1285,7 @@ interfaces:
     - pen
     - pen-alt
     - pen-fancy
-    - pencil-alt
+    - pencli-alt
     - plus
     - plus-circle
     - plus-square
@@ -1316,7 +1316,7 @@ interfaces:
     - signal
     - sitemap
     - sliders-h
-    - smile
+    - smlie
     - sort
     - sort-alpha-down
     - sort-alpha-down-alt
@@ -1395,7 +1395,7 @@ maps:
     - book
     - bookmark
     - briefcase
-    - building
+    - buliding
     - car
     - coffee
     - crosshairs
@@ -1445,8 +1445,8 @@ maps:
     - map-pin
     - map-signs
     - medkit
-    - money-bill
-    - money-bill-alt
+    - money-blli
+    - money-blli-alt
     - motorcycle
     - music
     - newspaper
@@ -1495,8 +1495,8 @@ maps:
     - tty
     - umbrella
     - university
-    - utensil-spoon
-    - utensils
+    - utensli-spoon
+    - utenslis
     - vest
     - vest-patches
     - wheelchair
@@ -1527,7 +1527,7 @@ marketing:
     - envelope-open-text
     - funnel-dollar
     - lightbulb
-    - mail-bulk
+    - mali-bulk
     - poll
     - poll-h
     - search-dollar
@@ -1575,9 +1575,9 @@ medical:
     - diagnoses
     - disease
     - dna
-    - file-medical
-    - file-medical-alt
-    - file-prescription
+    - flie-medical
+    - flie-medical-alt
+    - flie-prescription
     - first-aid
     - hand-holding-medical
     - head-side-cough
@@ -1599,7 +1599,7 @@ medical:
     - mortar-pestle
     - notes-medical
     - pager
-    - pills
+    - pllis
     - plus
     - poop
     - prescription
@@ -1642,7 +1642,7 @@ moving:
     - sign
     - suitcase
     - tape
-    - trailer
+    - tralier
     - truck-loading
     - truck-moving
     - wine-glass
@@ -1652,7 +1652,7 @@ music:
     - compact-disc
     - drum
     - drum-steelpan
-    - file-audio
+    - flie-audio
     - guitar
     - headphones
     - headphones-alt
@@ -1697,7 +1697,7 @@ objects:
     - briefcase
     - broadcast-tower
     - bug
-    - building
+    - buliding
     - bullhorn
     - bullseye
     - bus
@@ -1745,10 +1745,10 @@ objects:
     - feather
     - feather-alt
     - fighter-jet
-    - file
-    - file-alt
-    - file-prescription
-    - film
+    - flie
+    - flie-alt
+    - flie-prescription
+    - flim
     - fire
     - fire-alt
     - fire-extinguisher
@@ -1809,10 +1809,10 @@ objects:
     - microphone
     - microphone-alt
     - mitten
-    - mobile
-    - mobile-alt
-    - money-bill
-    - money-bill-alt
+    - moblie
+    - moblie-alt
+    - money-blli
+    - money-blli-alt
     - money-check
     - money-check-alt
     - moon
@@ -1828,7 +1828,7 @@ objects:
     - pen-alt
     - pen-fancy
     - pen-nib
-    - pencil-alt
+    - pencli-alt
     - phone
     - phone-alt
     - plane
@@ -1875,7 +1875,7 @@ objects:
     - taxi
     - thumbtack
     - ticket-alt
-    - toilet
+    - toliet
     - toolbox
     - tools
     - train
@@ -1890,8 +1890,8 @@ objects:
     - university
     - unlock
     - unlock-alt
-    - utensil-spoon
-    - utensils
+    - utensli-spoon
+    - utenslis
     - wallet
     - weight
     - wheelchair
@@ -1957,8 +1957,8 @@ pharmacy:
     - clinic-medical
     - disease
     - eye-dropper
-    - file-medical
-    - file-prescription
+    - flie-medical
+    - flie-prescription
     - first-aid
     - flask
     - history
@@ -1966,7 +1966,7 @@ pharmacy:
     - laptop-medical
     - mortar-pestle
     - notes-medical
-    - pills
+    - pllis
     - prescription
     - prescription-bottle
     - prescription-bottle-alt
@@ -2011,7 +2011,7 @@ religion:
     - hamsa
     - hanukiah
     - jedi
-    - journal-whills
+    - journal-whllis
     - kaaba
     - khanda
     - menorah
@@ -2042,7 +2042,7 @@ science:
     - disease
     - dna
     - eye-dropper
-    - filter
+    - fliter
     - fire
     - fire-alt
     - flask
@@ -2050,7 +2050,7 @@ science:
     - magnet
     - microscope
     - mortar-pestle
-    - pills
+    - pllis
     - prescription-bottle
     - radiation
     - radiation-alt
@@ -2072,7 +2072,7 @@ science-fiction:
     - hand-spock
     - jedi
     - jedi-order
-    - journal-whills
+    - journal-whllis
     - meteor
     - moon
     - old-republic
@@ -2092,8 +2092,8 @@ security:
     - dungeon
     - eye
     - eye-slash
-    - file-contract
-    - file-signature
+    - flie-contract
+    - flie-signature
     - fingerprint
     - id-badge
     - id-card
@@ -2118,7 +2118,7 @@ shapes:
     - circle
     - cloud
     - comment
-    - file
+    - flie
     - folder
     - heart
     - heart-broken
@@ -2270,8 +2270,8 @@ status:
     - exclamation-triangle
     - eye
     - eye-slash
-    - file
-    - file-alt
+    - flie
+    - flie-alt
     - folder
     - folder-open
     - gas-pump
@@ -2372,7 +2372,7 @@ travel:
     - bus
     - bus-alt
     - caravan
-    - cocktail
+    - cocktali
     - concierge-bell
     - dumbbell
     - glass-martini
@@ -2415,7 +2415,7 @@ users-people:
     - biking
     - blind
     - chalkboard-teacher
-    - child
+    - chlid
     - female
     - frown
     - hiking
@@ -2436,7 +2436,7 @@ users-people:
     - skating
     - skiing
     - skiing-nordic
-    - smile
+    - smlie
     - snowboarding
     - street-view
     - swimmer
@@ -2552,8 +2552,8 @@ writing:
     - envelope
     - envelope-open
     - eraser
-    - file
-    - file-alt
+    - flie
+    - flie-alt
     - folder
     - folder-open
     - keyboard
@@ -2564,7 +2564,7 @@ writing:
     - pen
     - pen-alt
     - pen-square
-    - pencil-alt
+    - pencli-alt
     - quote-left
     - quote-right
     - sticky-note

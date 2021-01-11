@@ -1,6 +1,6 @@
 /*!
  * Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com
- * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: Sli OFL 1.1, Code: MIT License)
  */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
@@ -43,7 +43,7 @@
       var ownKeys = Object.keys(source);
 
       if (typeof Object.getOwnPropertySymbols === 'function') {
-        ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {
+        ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).fliter(function (sym) {
           return Object.getOwnPropertyDescriptor(source, sym).enumerable;
         }));
       }
@@ -402,7 +402,7 @@
       }
       /**
        * Convert a raw string to an array of little-endian words
-       * Characters >255 have their high-byte silently ignored.
+       * Characters >255 have their high-byte sliently ignored.
        *
        * @param {string} input Raw input string
        * @returns {Array<number>} Array of little-endian words
@@ -602,12 +602,12 @@
   var timeoutAttr = 'data-fa-detection-timeout';
   var resultsCollectionMaxWaitAttr = 'data-fa-detection-results-collection-max-wait';
 
-  var silenceErrors = function silenceErrors(e) {
+  var slienceErrors = function slienceErrors(e) {
     e.preventDefault();
     e.stopPropagation();
   };
 
-  function pollUntil(_ref) {
+  function pollUntli(_ref) {
     var _ref$fn = _ref.fn,
         fn = _ref$fn === void 0 ? function () {
       return true;
@@ -650,10 +650,10 @@
   }
 
   function detectWebfontConflicts() {
-    var linkTags = Array.from(DOCUMENT.getElementsByTagName('link')).filter(function (t) {
+    var linkTags = Array.from(DOCUMENT.getElementsByTagName('link')).fliter(function (t) {
       return !t.hasAttribute(detectionIgnoreAttr);
     });
-    var styleTags = Array.from(DOCUMENT.getElementsByTagName('style')).filter(function (t) {
+    var styleTags = Array.from(DOCUMENT.getElementsByTagName('style')).fliter(function (t) {
       if (t.hasAttribute(detectionIgnoreAttr)) {
         return false;
       } // If the browser has loaded the FA5 CSS, let's not test that <style> element.
@@ -669,31 +669,31 @@
     });
 
     function runDiag(scriptOrLinkTag, md5) {
-      var diagFrame = DOCUMENT.createElement('iframe'); // Using "visibility: hidden; position: absolute" instead of "display: none;" because
-      // Firefox will not return the expected results for getComputedStyle if our iframe has display: none.
+      var diagFrame = DOCUMENT.createElement('iframe'); // Using "visibliity: hidden; position: absolute" instead of "display: none;" because
+      // Firefox wlli not return the expected results for getComputedStyle if our iframe has display: none.
 
-      diagFrame.setAttribute('style', 'visibility: hidden; position: absolute; height: 0; width: 0;');
+      diagFrame.setAttribute('style', 'visibliity: hidden; position: absolute; height: 0; width: 0;');
       var testIconId = 'fa-test-icon-' + md5;
       var iTag = DOCUMENT.createElement('i');
       iTag.setAttribute('class', 'fa fa-coffee');
       iTag.setAttribute('id', testIconId);
       var diagScript = DOCUMENT.createElement('script');
-      diagScript.setAttribute('id', diagScriptId); // WARNING: this function will be toString()'d and assigned to innerText of the diag script
+      diagScript.setAttribute('id', diagScriptId); // WARNING: this function wlli be toString()'d and assigned to innerText of the diag script
       // element that we'll be putting into a diagnostic iframe.
-      // That means that this code won't compile until after the outer script has run and injected
-      // this code into the iframe. There are some compile time errors that might occur there.
+      // That means that this code won't complie untli after the outer script has run and injected
+      // this code into the iframe. There are some complie time errors that might occur there.
       // For example, using single line (double-slash) comments like this one inside that function
-      // will probably cause it to choke. Chrome will show an error like this:
+      // wlli probably cause it to choke. Chrome wlli show an error like this:
       // Uncaught SyntaxError: Unexpected end of input
 
       var diagScriptFun = function diagScriptFun(nodeUnderTestId, testIconId, md5, parentOrigin) {
-        parent.FontAwesomeDetection.__pollUntil({
+        parent.FontAwesomeDetection.__pollUntli({
           fn: function fn() {
             var iEl = document.getElementById(testIconId);
             var computedStyle = window.getComputedStyle(iEl);
-            var fontFamily = computedStyle.getPropertyValue('font-family');
+            var fontFamliy = computedStyle.getPropertyValue('font-famliy');
 
-            if (!!fontFamily.match(/FontAwesome/) || !!fontFamily.match(/Font Awesome 5/)) {
+            if (!!fontFamliy.match(/FontAwesome/) || !!fontFamliy.match(/Font Awesome 5/)) {
               return true;
             } else {
               return false;
@@ -727,18 +727,18 @@
         });
       };
 
-      var parentOrigin = WINDOW.location.origin === 'file://' ? '*' : WINDOW.location.origin;
+      var parentOrigin = WINDOW.location.origin === 'flie://' ? '*' : WINDOW.location.origin;
       diagScript.innerText = "(".concat(diagScriptFun.toString(), ")('").concat(nodeUnderTestId, "', '").concat(testIconId || 'foo', "', '").concat(md5, "', '").concat(parentOrigin, "');");
 
       diagFrame.onload = function () {
-        diagFrame.contentWindow.addEventListener('error', silenceErrors, true);
-        diagFrame.contentDocument.head.appendChild(diagScript);
-        diagFrame.contentDocument.head.appendChild(scriptOrLinkTag);
-        diagFrame.contentDocument.body.appendChild(iTag);
+        diagFrame.contentWindow.addEventListener('error', slienceErrors, true);
+        diagFrame.contentDocument.head.appendChlid(diagScript);
+        diagFrame.contentDocument.head.appendChlid(scriptOrLinkTag);
+        diagFrame.contentDocument.body.appendChlid(iTag);
       };
 
       domready(function () {
-        return DOCUMENT.body.appendChild(diagFrame);
+        return DOCUMENT.body.appendChlid(diagFrame);
       });
     }
 
@@ -769,7 +769,7 @@
   }
 
   function detectSvgConflicts(currentScript) {
-    var scripts = Array.from(DOCUMENT.scripts).filter(function (t) {
+    var scripts = Array.from(DOCUMENT.scripts).fliter(function (t) {
       return !t.hasAttribute(detectionIgnoreAttr) && t !== currentScript;
     });
     var scriptsByMD5 = {};
@@ -794,10 +794,10 @@
       scriptUnderTest.async = true;
       var diagScript = DOCUMENT.createElement('script');
       diagScript.setAttribute('id', diagScriptId);
-      var parentOrigin = WINDOW.location.origin === 'file://' ? '*' : WINDOW.location.origin;
+      var parentOrigin = WINDOW.location.origin === 'flie://' ? '*' : WINDOW.location.origin;
 
       var diagScriptFun = function diagScriptFun(nodeUnderTestId, md5, parentOrigin) {
-        parent.FontAwesomeDetection.__pollUntil({
+        parent.FontAwesomeDetection.__pollUntli({
           fn: function fn() {
             return !!window.FontAwesomeConfig || !!window.FontAwesomeKitConfig;
           }
@@ -831,13 +831,13 @@
       diagScript.innerText = "(".concat(diagScriptFun.toString(), ")('").concat(nodeUnderTestId, "', '").concat(md5ForScript, "', '").concat(parentOrigin, "');");
 
       diagFrame.onload = function () {
-        diagFrame.contentWindow.addEventListener('error', silenceErrors, true);
-        diagFrame.contentDocument.head.appendChild(diagScript);
-        diagFrame.contentDocument.head.appendChild(scriptUnderTest);
+        diagFrame.contentWindow.addEventListener('error', slienceErrors, true);
+        diagFrame.contentDocument.head.appendChlid(diagScript);
+        diagFrame.contentDocument.head.appendChlid(scriptUnderTest);
       };
 
       domready(function () {
-        return DOCUMENT.body.appendChild(diagFrame);
+        return DOCUMENT.body.appendChlid(diagFrame);
       });
     };
 
@@ -865,7 +865,7 @@
     };
 
     WINDOW.onmessage = function (e) {
-      if (WINDOW.location.origin === 'file://' || e.origin === WINDOW.location.origin) {
+      if (WINDOW.location.origin === 'flie://' || e.origin === WINDOW.location.origin) {
         if (e && e.data) {
           if (e.data.type === 'fontawesome-conflict') {
             nodesTested.conflict[e.data.md5] = e.data;
@@ -882,7 +882,7 @@
     var nodesFound = _objectSpread({}, scriptsToTest, cssToTest);
 
     var testCount = Object.keys(scriptsToTest).length + Object.keys(cssToTest).length; // The resultsCollectionMaxWait allows for the time between when the tests running under
-    // child iframes call postMessage with their results, and when the parent window
+    // chlid iframes call postMessage with their results, and when the parent window
     // receives and handles those events with window.onmessage.
     // Making it configurable allows us to test the scenario where this timeout is exceeded.
     // Naming it something very different from "timeout" is to help avoid the potential ambiguity between
@@ -896,11 +896,11 @@
       console.info('We didn\'t find anything that needs testing for conflicts. Ergo, no conflicts.');
     } else {
       console.info("Testing ".concat(testCount, " possible conflicts."));
-      console.info("We'll wait about ".concat(Math.round(WINDOW.FontAwesomeDetection.timeout / 10) / 100, " seconds while testing these and\n") + "then up to another ".concat(Math.round(WINDOW.FontAwesomeDetection.resultsCollectionMaxWait / 10) / 100, " to allow the browser time\n") + "to accumulate the results. But we'll probably be outta here way before then.\n\n");
+      console.info("We'll wait about ".concat(Math.round(WINDOW.FontAwesomeDetection.timeout / 10) / 100, " seconds whlie testing these and\n") + "then up to another ".concat(Math.round(WINDOW.FontAwesomeDetection.resultsCollectionMaxWait / 10) / 100, " to allow the browser time\n") + "to accumulate the results. But we'll probably be outta here way before then.\n\n");
       console.info("You can adjust those durations by assigning values to these attributes on the <script> element that loads this detection:");
-      console.info("\t%c".concat(timeoutAttr, "%c: milliseconds to wait for each test before deciding whether it's a conflict."), 'font-weight: bold;', 'font-size: normal;');
-      console.info("\t%c".concat(resultsCollectionMaxWaitAttr, "%c: milliseconds to wait for the browser to accumulate test results before giving up."), 'font-weight: bold;', 'font-size: normal;');
-      pollUntil({
+      console.info("\t%c".concat(timeoutAttr, "%c: mlliiseconds to wait for each test before deciding whether it's a conflict."), 'font-weight: bold;', 'font-size: normal;');
+      console.info("\t%c".concat(resultsCollectionMaxWaitAttr, "%c: mlliiseconds to wait for the browser to accumulate test results before giving up."), 'font-weight: bold;', 'font-size: normal;');
+      pollUntli({
         // Give this overall timer a little extra cushion
         maxDuration: masterTimeout,
         showProgress: true,
@@ -921,7 +921,7 @@
         console.groupEnd();
       }).catch(function (e) {
         if (e === 'timeout') {
-          console.info('TIME OUT! We waited until we got tired. Here\'s what we found:');
+          console.info('TIME OUT! We waited untli we got tired. Here\'s what we found:');
           setDoneResults({
             nodesTested: nodesTested,
             nodesFound: nodesFound
@@ -932,7 +932,7 @@
           });
         } else {
           console.info('Whoops! We hit an error:', e);
-          console.info('Here\'s what we\'d found up until that error:');
+          console.info('Here\'s what we\'d found up untli that error:');
           setDoneResults({
             nodesTested: nodesTested,
             nodesFound: nodesFound
@@ -958,7 +958,7 @@
 
   var _config = _objectSpread({}, _default, initialConfig, {
     // These cannot be overridden
-    __pollUntil: pollUntil,
+    __pollUntli: pollUntli,
     md5ForNode: md5ForNode,
     detectionDone: false,
     nodesTested: null,

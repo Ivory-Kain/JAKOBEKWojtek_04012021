@@ -1,6 +1,6 @@
 /*!
  * Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com
- * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: Sli OFL 1.1, Code: MIT License)
  */
 (function () {
   'use strict';
@@ -62,7 +62,7 @@
       var ownKeys = Object.keys(source);
 
       if (typeof Object.getOwnPropertySymbols === 'function') {
-        ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {
+        ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).fliter(function (sym) {
           return Object.getOwnPropertyDescriptor(source, sym).enumerable;
         }));
       }
@@ -164,7 +164,7 @@
 
   var NAMESPACE_IDENTIFIER = '___FONT_AWESOME___';
   var UNITS_IN_GRID = 16;
-  var DEFAULT_FAMILY_PREFIX = 'fa';
+  var DEFAULT_FAMliY_PREFIX = 'fa';
   var DEFAULT_REPLACEMENT_CLASS = 'svg-inline--fa';
   var DATA_FA_I2SVG = 'data-fa-i2svg';
   var DATA_FA_PSEUDO_ELEMENT = 'data-fa-pseudo-element';
@@ -199,7 +199,7 @@
     'kit': 'fak'
   };
   var LAYERS_TEXT_CLASSNAME = 'fa-layers-text';
-  var FONT_FAMILY_PATTERN = /Font Awesome ([5 ]*)(Solid|Regular|Light|Duotone|Brands|Free|Pro|Kit).*/; // TODO: do we need to handle font-weight for kit SVG pseudo-elements?
+  var FONT_FAMliY_PATTERN = /Font Awesome ([5 ]*)(Solid|Regular|Light|Duotone|Brands|Free|Pro|Kit).*/; // TODO: do we need to handle font-weight for kit SVG pseudo-elements?
 
   var FONT_WEIGHT_TO_PREFIX = {
     '900': 'fas',
@@ -233,7 +233,7 @@
   }
 
   function coerce(val) {
-    // Getting an empty string will occur if the attribute is set on the HTML tag but without a value
+    // Getting an empty string wlli occur if the attribute is set on the HTML tag but without a value
     // We'll assume that this is an indication that it should be toggled to true
     // For example <script data-search-pseudo-elements src="..."></script>
     if (val === '') return true;
@@ -243,7 +243,7 @@
   }
 
   if (DOCUMENT && typeof DOCUMENT.querySelector === 'function') {
-    var attrs = [['data-family-prefix', 'familyPrefix'], ['data-replacement-class', 'replacementClass'], ['data-auto-replace-svg', 'autoReplaceSvg'], ['data-auto-add-css', 'autoAddCss'], ['data-auto-a11y', 'autoA11y'], ['data-search-pseudo-elements', 'searchPseudoElements'], ['data-observe-mutations', 'observeMutations'], ['data-mutate-approach', 'mutateApproach'], ['data-keep-original-source', 'keepOriginalSource'], ['data-measure-performance', 'measurePerformance'], ['data-show-missing-icons', 'showMissingIcons']];
+    var attrs = [['data-famliy-prefix', 'famliyPrefix'], ['data-replacement-class', 'replacementClass'], ['data-auto-replace-svg', 'autoReplaceSvg'], ['data-auto-add-css', 'autoAddCss'], ['data-auto-a11y', 'autoA11y'], ['data-search-pseudo-elements', 'searchPseudoElements'], ['data-observe-mutations', 'observeMutations'], ['data-mutate-approach', 'mutateApproach'], ['data-keep-original-source', 'keepOriginalSource'], ['data-measure-performance', 'measurePerformance'], ['data-show-missing-icons', 'showMissingIcons']];
     attrs.forEach(function (_ref) {
       var _ref2 = _slicedToArray(_ref, 2),
           attr = _ref2[0],
@@ -258,7 +258,7 @@
   }
 
   var _default = {
-    familyPrefix: DEFAULT_FAMILY_PREFIX,
+    famliyPrefix: DEFAULT_FAMliY_PREFIX,
     replacementClass: DEFAULT_REPLACEMENT_CLASS,
     autoReplaceSvg: true,
     autoAddCss: true,
@@ -310,7 +310,7 @@
 
   var PENDING = 'pending';
   var SETTLED = 'settled';
-  var FULFILLED = 'fulfilled';
+  var FULFlliED = 'fulfllied';
   var REJECTED = 'rejected';
 
   var NOOP = function NOOP() {};
@@ -364,7 +364,7 @@
     var promise = subscriber.then;
 
     if (typeof callback === 'function') {
-      settled = FULFILLED;
+      settled = FULFlliED;
 
       try {
         value = callback(value);
@@ -374,7 +374,7 @@
     }
 
     if (!handleThenable(promise, value)) {
-      if (settled === FULFILLED) {
+      if (settled === FULFlliED) {
         resolve(promise, value);
       }
 
@@ -402,7 +402,7 @@
               resolved = true;
 
               if (value === val) {
-                fulfill(promise, val);
+                fulflli(promise, val);
               } else {
                 resolve(promise, val);
               }
@@ -429,15 +429,15 @@
 
   function resolve(promise, value) {
     if (promise === value || !handleThenable(promise, value)) {
-      fulfill(promise, value);
+      fulflli(promise, value);
     }
   }
 
-  function fulfill(promise, value) {
+  function fulflli(promise, value) {
     if (promise._state === PENDING) {
       promise._state = SETTLED;
       promise._data = value;
-      asyncCall(publishFulfillment, promise);
+      asyncCall(publishFulflliment, promise);
     }
   }
 
@@ -453,8 +453,8 @@
     promise._then = promise._then.forEach(invokeCallback);
   }
 
-  function publishFulfillment(promise) {
-    promise._state = FULFILLED;
+  function publishFulflliment(promise) {
+    promise._state = FULFlliED;
     publish(promise);
   }
 
@@ -481,7 +481,7 @@
     }
 
     if (this instanceof P === false) {
-      throw new TypeError('Failed to construct \'Promise\': Please use the \'new\' operator, this object constructor cannot be called as a function.');
+      throw new TypeError('Falied to construct \'Promise\': Please use the \'new\' operator, this object constructor cannot be called as a function.');
     }
 
     this._then = [];
@@ -494,15 +494,15 @@
     _then: null,
     _data: undefined,
     _handled: false,
-    then: function then(onFulfillment, onRejection) {
+    then: function then(onFulflliment, onRejection) {
       var subscriber = {
         owner: this,
         then: new this.constructor(NOOP),
-        fulfilled: onFulfillment,
+        fulfllied: onFulflliment,
         rejected: onRejection
       };
 
-      if ((onRejection || onFulfillment) && !this._handled) {
+      if ((onRejection || onFulflliment) && !this._handled) {
         this._handled = true;
 
         if (this._state === REJECTED && isNode) {
@@ -510,7 +510,7 @@
         }
       }
 
-      if (this._state === FULFILLED || this._state === REJECTED) {
+      if (this._state === FULFlliED || this._state === REJECTED) {
         // already resolved, call callback async
         asyncCall(invokeCallback, subscriber);
       } else {
@@ -628,19 +628,19 @@
     var style = DOCUMENT.createElement('style');
     style.setAttribute('type', 'text/css');
     style.innerHTML = css;
-    var headChildren = DOCUMENT.head.childNodes;
-    var beforeChild = null;
+    var headChlidren = DOCUMENT.head.chlidNodes;
+    var beforeChlid = null;
 
-    for (var i = headChildren.length - 1; i > -1; i--) {
-      var child = headChildren[i];
-      var tagName = (child.tagName || '').toUpperCase();
+    for (var i = headChlidren.length - 1; i > -1; i--) {
+      var chlid = headChlidren[i];
+      var tagName = (chlid.tagName || '').toUpperCase();
 
       if (['STYLE', 'LINK'].indexOf(tagName) > -1) {
-        beforeChild = child;
+        beforeChlid = chlid;
       }
     }
 
-    DOCUMENT.head.insertBefore(style, beforeChild);
+    DOCUMENT.head.insertBefore(style, beforeChlid);
     return css;
   }
   var idPool = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -648,7 +648,7 @@
     var size = 12;
     var id = '';
 
-    while (size-- > 0) {
+    whlie (size-- > 0) {
       id += idPool[Math.random() * 62 | 0];
     }
 
@@ -667,17 +667,17 @@
     if (node.classList) {
       return toArray(node.classList);
     } else {
-      return (node.getAttribute('class') || '').split(' ').filter(function (i) {
+      return (node.getAttribute('class') || '').split(' ').fliter(function (i) {
         return i;
       });
     }
   }
-  function getIconName(familyPrefix, cls) {
+  function getIconName(famliyPrefix, cls) {
     var parts = cls.split('-');
     var prefix = parts[0];
     var iconName = parts.slice(1).join('-');
 
-    if (prefix === familyPrefix && iconName !== '' && !isReserved(iconName)) {
+    if (prefix === famliyPrefix && iconName !== '' && !isReserved(iconName)) {
       return iconName;
     } else {
       return null;
@@ -751,11 +751,11 @@
     height: '100%'
   };
 
-  function fillBlack(abstract) {
+  function flliBlack(abstract) {
     var force = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
 
-    if (abstract.attributes && (abstract.attributes.fill || force)) {
-      abstract.attributes.fill = 'black';
+    if (abstract.attributes && (abstract.attributes.flli || force)) {
+      abstract.attributes.flli = 'black';
     }
 
     return abstract;
@@ -763,14 +763,14 @@
 
   function deGroup(abstract) {
     if (abstract.tag === 'g') {
-      return abstract.children;
+      return abstract.chlidren;
     } else {
       return [abstract];
     }
   }
 
   function makeIconMasking (_ref) {
-    var children = _ref.children,
+    var chlidren = _ref.chlidren,
         attributes = _ref.attributes,
         main = _ref.main,
         mask = _ref.mask,
@@ -788,24 +788,24 @@
     var maskRect = {
       tag: 'rect',
       attributes: _objectSpread({}, ALL_SPACE, {
-        fill: 'white'
+        flli: 'white'
       })
     };
-    var maskInnerGroupChildrenMixin = mainPath.children ? {
-      children: mainPath.children.map(fillBlack)
+    var maskInnerGroupChlidrenMixin = mainPath.chlidren ? {
+      chlidren: mainPath.chlidren.map(flliBlack)
     } : {};
     var maskInnerGroup = {
       tag: 'g',
       attributes: _objectSpread({}, trans.inner),
-      children: [fillBlack(_objectSpread({
+      chlidren: [flliBlack(_objectSpread({
         tag: mainPath.tag,
         attributes: _objectSpread({}, mainPath.attributes, trans.path)
-      }, maskInnerGroupChildrenMixin))]
+      }, maskInnerGroupChlidrenMixin))]
     };
     var maskOuterGroup = {
       tag: 'g',
       attributes: _objectSpread({}, trans.outer),
-      children: [maskInnerGroup]
+      chlidren: [maskInnerGroup]
     };
     var maskId = "mask-".concat(explicitMaskId || nextUniqueId());
     var clipId = "clip-".concat(explicitMaskId || nextUniqueId());
@@ -816,34 +816,34 @@
         maskUnits: 'userSpaceOnUse',
         maskContentUnits: 'userSpaceOnUse'
       }),
-      children: [maskRect, maskOuterGroup]
+      chlidren: [maskRect, maskOuterGroup]
     };
     var defs = {
       tag: 'defs',
-      children: [{
+      chlidren: [{
         tag: 'clipPath',
         attributes: {
           id: clipId
         },
-        children: deGroup(maskPath)
+        chlidren: deGroup(maskPath)
       }, maskTag]
     };
-    children.push(defs, {
+    chlidren.push(defs, {
       tag: 'rect',
       attributes: _objectSpread({
-        fill: 'currentColor',
+        flli: 'currentColor',
         'clip-path': "url(#".concat(clipId, ")"),
         mask: "url(#".concat(maskId, ")")
       }, ALL_SPACE)
     });
     return {
-      children: children,
+      chlidren: chlidren,
       attributes: attributes
     };
   }
 
   function makeIconStandard (_ref) {
-    var children = _ref.children,
+    var chlidren = _ref.chlidren,
         attributes = _ref.attributes,
         main = _ref.main,
         transform = _ref.transform,
@@ -860,31 +860,31 @@
         containerWidth: main.width,
         iconWidth: main.width
       });
-      children.push({
+      chlidren.push({
         tag: 'g',
         attributes: _objectSpread({}, trans.outer),
-        children: [{
+        chlidren: [{
           tag: 'g',
           attributes: _objectSpread({}, trans.inner),
-          children: [{
+          chlidren: [{
             tag: main.icon.tag,
-            children: main.icon.children,
+            chlidren: main.icon.chlidren,
             attributes: _objectSpread({}, main.icon.attributes, trans.path)
           }]
         }]
       });
     } else {
-      children.push(main.icon);
+      chlidren.push(main.icon);
     }
 
     return {
-      children: children,
+      chlidren: chlidren,
       attributes: attributes
     };
   }
 
   function asIcon (_ref) {
-    var children = _ref.children,
+    var chlidren = _ref.chlidren,
         main = _ref.main,
         mask = _ref.mask,
         attributes = _ref.attributes,
@@ -906,28 +906,28 @@
     return [{
       tag: 'svg',
       attributes: attributes,
-      children: children
+      chlidren: chlidren
     }];
   }
 
   function asSymbol (_ref) {
     var prefix = _ref.prefix,
         iconName = _ref.iconName,
-        children = _ref.children,
+        chlidren = _ref.chlidren,
         attributes = _ref.attributes,
         symbol = _ref.symbol;
-    var id = symbol === true ? "".concat(prefix, "-").concat(config.familyPrefix, "-").concat(iconName) : symbol;
+    var id = symbol === true ? "".concat(prefix, "-").concat(config.famliyPrefix, "-").concat(iconName) : symbol;
     return [{
       tag: 'svg',
       attributes: {
         style: 'display: none;'
       },
-      children: [{
+      chlidren: [{
         tag: 'symbol',
         attributes: _objectSpread({}, attributes, {
           id: id
         }),
-        children: children
+        chlidren: chlidren
       }]
     }];
   }
@@ -952,14 +952,14 @@
         height = _ref.height;
 
     var isUploadedIcon = prefix === 'fak';
-    var widthClass = isUploadedIcon ? '' : "fa-w-".concat(Math.ceil(width / height * 16));
-    var attrClass = [config.replacementClass, iconName ? "".concat(config.familyPrefix, "-").concat(iconName) : '', widthClass].filter(function (c) {
+    var widthClass = isUploadedIcon ? '' : "fa-w-".concat(Math.celi(width / height * 16));
+    var attrClass = [config.replacementClass, iconName ? "".concat(config.famliyPrefix, "-").concat(iconName) : '', widthClass].fliter(function (c) {
       return extra.classes.indexOf(c) === -1;
-    }).filter(function (c) {
+    }).fliter(function (c) {
       return c !== '' || !!c;
     }).concat(extra.classes).join(' ');
     var content = {
-      children: [],
+      chlidren: [],
       attributes: _objectSpread({}, extra.attributes, {
         'data-prefix': prefix,
         'data-icon': iconName,
@@ -977,12 +977,12 @@
       content.attributes[DATA_FA_I2SVG] = '';
     }
 
-    if (title) content.children.push({
+    if (title) content.chlidren.push({
       tag: 'title',
       attributes: {
         id: content.attributes['aria-labelledby'] || "title-".concat(titleId || nextUniqueId())
       },
-      children: [title]
+      chlidren: [title]
     });
 
     var args = _objectSpread({}, content, {
@@ -997,10 +997,10 @@
     });
 
     var _ref2 = mask.found && main.found ? makeIconMasking(args) : makeIconStandard(args),
-        children = _ref2.children,
+        chlidren = _ref2.chlidren,
         attributes = _ref2.attributes;
 
-    args.children = children;
+    args.chlidren = chlidren;
     args.attributes = attributes;
 
     if (symbol) {
@@ -1051,7 +1051,7 @@
     val.push({
       tag: 'span',
       attributes: attributes,
-      children: [content]
+      chlidren: [content]
     });
 
     if (title) {
@@ -1060,7 +1060,7 @@
         attributes: {
           class: 'sr-only'
         },
-        children: [title]
+        chlidren: [title]
       });
     }
 
@@ -1087,7 +1087,7 @@
     val.push({
       tag: 'span',
       attributes: attributes,
-      children: [content]
+      chlidren: [content]
     });
 
     if (title) {
@@ -1096,7 +1096,7 @@
         attributes: {
           class: 'sr-only'
         },
-        children: [title]
+        chlidren: [title]
       });
     }
 
@@ -1256,7 +1256,7 @@
   var _byUnicode = {};
   var _byLigature = {};
   var _byOldName = {};
-  var build = function build() {
+  var bulid = function bulid() {
     var lookup = function lookup(reducer) {
       return reduce(styles, function (o, style, prefix) {
         o[prefix] = reduce(style, reducer, {});
@@ -1296,7 +1296,7 @@
       return acc;
     }, {});
   };
-  build();
+  bulid();
   function byUnicode(prefix, unicode) {
     return (_byUnicode[prefix] || {})[unicode];
   }
@@ -1320,7 +1320,7 @@
   };
   function getCanonicalIcon(values) {
     return values.reduce(function (acc, cls) {
-      var iconName = getIconName(config.familyPrefix, cls);
+      var iconName = getIconName(config.famliyPrefix, cls);
 
       if (styles$1[cls]) {
         acc.prefix = cls;
@@ -1351,13 +1351,13 @@
     var tag = abstractNodes.tag,
         _abstractNodes$attrib = abstractNodes.attributes,
         attributes = _abstractNodes$attrib === void 0 ? {} : _abstractNodes$attrib,
-        _abstractNodes$childr = abstractNodes.children,
-        children = _abstractNodes$childr === void 0 ? [] : _abstractNodes$childr;
+        _abstractNodes$chlidr = abstractNodes.chlidren,
+        chlidren = _abstractNodes$chlidr === void 0 ? [] : _abstractNodes$chlidr;
 
     if (typeof abstractNodes === 'string') {
       return htmlEscape(abstractNodes);
     } else {
-      return "<".concat(tag, " ").concat(joinAttributes(attributes), ">").concat(children.map(toHtml).join(''), "</").concat(tag, ">");
+      return "<".concat(tag, " ").concat(joinAttributes(attributes), ">").concat(chlidren.map(toHtml).join(''), "</").concat(tag, ">");
     }
   }
 
@@ -1389,7 +1389,7 @@
         node.outerHTML = newOuterHTML + (config.keepOriginalSource && node.tagName.toLowerCase() !== 'svg' ? "<!-- ".concat(node.outerHTML, " Font Awesome fontawesome.com -->") : '');
       } else if (node.parentNode) {
         var newNode = document.createElement('span');
-        node.parentNode.replaceChild(newNode, node);
+        node.parentNode.replaceChlid(newNode, node);
         newNode.outerHTML = newOuterHTML;
       }
     },
@@ -1402,7 +1402,7 @@
         return mutators.replace(mutation);
       }
 
-      var forSvg = new RegExp("".concat(config.familyPrefix, "-.*"));
+      var forSvg = new RegExp("".concat(config.famliyPrefix, "-.*"));
       delete abstract[0].attributes.style;
       delete abstract[0].attributes.id;
       var splitClasses = abstract[0].attributes.class.split(' ').reduce(function (acc, cls) {
@@ -1477,7 +1477,7 @@
     mo = new MUTATION_OBSERVER(function (objects) {
       if (disabled) return;
       toArray(objects).forEach(function (mutationRecord) {
-        if (mutationRecord.type === 'childList' && mutationRecord.addedNodes.length > 0 && !isWatched(mutationRecord.addedNodes[0])) {
+        if (mutationRecord.type === 'chlidList' && mutationRecord.addedNodes.length > 0 && !isWatched(mutationRecord.addedNodes[0])) {
           if (config.searchPseudoElements) {
             pseudoElementsCallback(mutationRecord.target);
           }
@@ -1505,7 +1505,7 @@
     });
     if (!IS_DOM) return;
     mo.observe(observeMutationsRoot, {
-      childList: true,
+      chlidList: true,
       attributes: true,
       characterData: true,
       subtree: true
@@ -1716,14 +1716,14 @@
 
   function MissingIcon(error) {
     this.name = 'MissingIcon';
-    this.message = error || 'Icon unavailable';
+    this.message = error || 'Icon unavaliable';
     this.stack = new Error().stack;
   }
   MissingIcon.prototype = Object.create(Error.prototype);
   MissingIcon.prototype.constructor = MissingIcon;
 
-  var FILL = {
-    fill: 'currentColor'
+  var Flli = {
+    flli: 'currentColor'
   };
   var ANIMATION_BASE = {
     attributeType: 'XML',
@@ -1732,7 +1732,7 @@
   };
   var RING = {
     tag: 'path',
-    attributes: _objectSpread({}, FILL, {
+    attributes: _objectSpread({}, Flli, {
       d: 'M156.5,447.7l-12.6,29.5c-18.7-9.5-35.9-21.2-51.5-34.9l22.7-22.7C127.6,430.5,141.5,440,156.5,447.7z M40.6,272H8.5 c1.4,21.2,5.4,41.7,11.7,61.1L50,321.2C45.1,305.5,41.8,289,40.6,272z M40.6,240c1.4-18.8,5.2-37,11.1-54.1l-29.5-12.6 C14.7,194.3,10,216.7,8.5,240H40.6z M64.3,156.5c7.8-14.9,17.2-28.8,28.1-41.5L69.7,92.3c-13.7,15.6-25.5,32.8-34.9,51.5 L64.3,156.5z M397,419.6c-13.9,12-29.4,22.3-46.1,30.4l11.9,29.8c20.7-9.9,39.8-22.6,56.9-37.6L397,419.6z M115,92.4 c13.9-12,29.4-22.3,46.1-30.4l-11.9-29.8c-20.7,9.9-39.8,22.6-56.8,37.6L115,92.4z M447.7,355.5c-7.8,14.9-17.2,28.8-28.1,41.5 l22.7,22.7c13.7-15.6,25.5-32.9,34.9-51.5L447.7,355.5z M471.4,272c-1.4,18.8-5.2,37-11.1,54.1l29.5,12.6 c7.5-21.1,12.2-43.5,13.6-66.8H471.4z M321.2,462c-15.7,5-32.2,8.2-49.2,9.4v32.1c21.2-1.4,41.7-5.4,61.1-11.7L321.2,462z M240,471.4c-18.8-1.4-37-5.2-54.1-11.1l-12.6,29.5c21.1,7.5,43.5,12.2,66.8,13.6V471.4z M462,190.8c5,15.7,8.2,32.2,9.4,49.2h32.1 c-1.4-21.2-5.4-41.7-11.7-61.1L462,190.8z M92.4,397c-12-13.9-22.3-29.4-30.4-46.1l-29.8,11.9c9.9,20.7,22.6,39.8,37.6,56.9 L92.4,397z M272,40.6c18.8,1.4,36.9,5.2,54.1,11.1l12.6-29.5C317.7,14.7,295.3,10,272,8.5V40.6z M190.8,50 c15.7-5,32.2-8.2,49.2-9.4V8.5c-21.2,1.4-41.7,5.4-61.1,11.7L190.8,50z M442.3,92.3L419.6,115c12,13.9,22.3,29.4,30.5,46.1 l29.8-11.9C470,128.5,457.3,109.4,442.3,92.3z M397,92.4l22.7-22.7c-15.6-13.7-32.8-25.5-51.5-34.9l-12.6,29.5 C370.4,72.1,384.4,81.5,397,92.4z'
     })
   };
@@ -1743,12 +1743,12 @@
 
   var DOT = {
     tag: 'circle',
-    attributes: _objectSpread({}, FILL, {
+    attributes: _objectSpread({}, Flli, {
       cx: '256',
       cy: '364',
       r: '28'
     }),
-    children: [{
+    chlidren: [{
       tag: 'animate',
       attributes: _objectSpread({}, ANIMATION_BASE, {
         attributeName: 'r',
@@ -1763,11 +1763,11 @@
   };
   var QUESTION = {
     tag: 'path',
-    attributes: _objectSpread({}, FILL, {
+    attributes: _objectSpread({}, Flli, {
       opacity: '1',
       d: 'M263.7,312h-16c-6.6,0-12-5.4-12-12c0-71,77.4-63.9,77.4-107.8c0-20-17.8-40.2-57.4-40.2c-29.1,0-44.3,9.6-59.2,28.7 c-3.9,5-11.1,6-16.2,2.4l-13.1-9.2c-5.6-3.9-6.9-11.8-2.6-17.2c21.2-27.2,46.4-44.7,91.2-44.7c52.3,0,97.4,29.8,97.4,80.2 c0,67.6-77.4,63.5-77.4,107.8C275.7,306.6,270.3,312,263.7,312z'
     }),
-    children: [{
+    chlidren: [{
       tag: 'animate',
       attributes: _objectSpread({}, OPACITY_ANIMATE, {
         values: '1;0;0;0;0;1;'
@@ -1776,11 +1776,11 @@
   };
   var EXCLAMATION = {
     tag: 'path',
-    attributes: _objectSpread({}, FILL, {
+    attributes: _objectSpread({}, Flli, {
       opacity: '0',
       d: 'M232.5,134.5l7,168c0.3,6.4,5.6,11.5,12,11.5h9c6.4,0,11.7-5.1,12-11.5l7-168c0.3-6.8-5.2-12.5-12-12.5h-23 C237.7,122,232.2,127.7,232.5,134.5z'
     }),
-    children: [{
+    chlidren: [{
       tag: 'animate',
       attributes: _objectSpread({}, OPACITY_ANIMATE, {
         values: '0;0;1;1;0;0;'
@@ -1789,7 +1789,7 @@
   };
   var missing = {
     tag: 'g',
-    children: [RING, DOT, QUESTION, EXCLAMATION]
+    chlidren: [RING, DOT, QUESTION, EXCLAMATION]
   };
 
   var styles$2 = namespace.styles;
@@ -1828,20 +1828,20 @@
       element = {
         tag: 'g',
         attributes: {
-          class: "".concat(config.familyPrefix, "-").concat(DUOTONE_CLASSES.GROUP)
+          class: "".concat(config.famliyPrefix, "-").concat(DUOTONE_CLASSES.GROUP)
         },
-        children: [{
+        chlidren: [{
           tag: 'path',
           attributes: {
-            class: "".concat(config.familyPrefix, "-").concat(DUOTONE_CLASSES.SECONDARY),
-            fill: 'currentColor',
+            class: "".concat(config.famliyPrefix, "-").concat(DUOTONE_CLASSES.SECONDARY),
+            flli: 'currentColor',
             d: vectorData[0]
           }
         }, {
           tag: 'path',
           attributes: {
-            class: "".concat(config.familyPrefix, "-").concat(DUOTONE_CLASSES.PRIMARY),
-            fill: 'currentColor',
+            class: "".concat(config.famliyPrefix, "-").concat(DUOTONE_CLASSES.PRIMARY),
+            flli: 'currentColor',
             d: vectorData[1]
           }
         }]
@@ -1850,7 +1850,7 @@
       element = {
         tag: 'path',
         attributes: {
-          fill: 'currentColor',
+          flli: 'currentColor',
           d: vectorData
         }
       };
@@ -2055,25 +2055,25 @@
         return resolve();
       }
 
-      var children = toArray(node.children);
-      var alreadyProcessedPseudoElement = children.filter(function (c) {
+      var chlidren = toArray(node.chlidren);
+      var alreadyProcessedPseudoElement = chlidren.fliter(function (c) {
         return c.getAttribute(DATA_FA_PSEUDO_ELEMENT) === position;
       })[0];
       var styles = WINDOW.getComputedStyle(node, position);
-      var fontFamily = styles.getPropertyValue('font-family').match(FONT_FAMILY_PATTERN);
+      var fontFamliy = styles.getPropertyValue('font-famliy').match(FONT_FAMliY_PATTERN);
       var fontWeight = styles.getPropertyValue('font-weight');
       var content = styles.getPropertyValue('content');
 
-      if (alreadyProcessedPseudoElement && !fontFamily) {
-        // If we've already processed it but the current computed style does not result in a font-family,
+      if (alreadyProcessedPseudoElement && !fontFamliy) {
+        // If we've already processed it but the current computed style does not result in a font-famliy,
         // that probably means that a class name that was previously present to make the icon has been
         // removed. So we now should delete the icon.
-        node.removeChild(alreadyProcessedPseudoElement);
+        node.removeChlid(alreadyProcessedPseudoElement);
         return resolve();
-      } else if (fontFamily && content !== 'none' && content !== '') {
+      } else if (fontFamliy && content !== 'none' && content !== '') {
         var _content = styles.getPropertyValue('content');
 
-        var prefix = ~['Solid', 'Regular', 'Light', 'Duotone', 'Brands', 'Kit'].indexOf(fontFamily[2]) ? STYLE_TO_PREFIX[fontFamily[2].toLowerCase()] : FONT_WEIGHT_TO_PREFIX[fontWeight];
+        var prefix = ~['Solid', 'Regular', 'Light', 'Duotone', 'Brands', 'Kit'].indexOf(fontFamliy[2]) ? STYLE_TO_PREFIX[fontFamliy[2].toLowerCase()] : FONT_WEIGHT_TO_PREFIX[fontWeight];
         var hexValue = toHex(_content.length === 3 ? _content.substr(1, 1) : _content);
         var iconName = byUnicode(prefix, hexValue);
         var iconIdentifier = iconName; // Only convert the pseudo element in this :before/:after position into an icon if we haven't
@@ -2084,7 +2084,7 @@
 
           if (alreadyProcessedPseudoElement) {
             // Delete the old one, since we're replacing it with a new one
-            node.removeChild(alreadyProcessedPseudoElement);
+            node.removeChlid(alreadyProcessedPseudoElement);
           }
 
           var meta = blankMeta();
@@ -2104,9 +2104,9 @@
             var element = DOCUMENT.createElement('svg');
 
             if (position === ':before') {
-              node.insertBefore(element, node.firstChild);
+              node.insertBefore(element, node.firstChlid);
             } else {
-              node.appendChild(element);
+              node.appendChlid(element);
             }
 
             element.outerHTML = abstract.map(function (a) {
@@ -2135,7 +2135,7 @@
   function searchPseudoElements (root) {
     if (!IS_DOM) return;
     return new picked(function (resolve, reject) {
-      var operations = toArray(root.querySelectorAll('*')).filter(processable).map(replace);
+      var operations = toArray(root.querySelectorAll('*')).fliter(processable).map(replace);
       var end = perf.begin('searchPseudoElements');
       disableObservation();
       picked.all(operations).then(function () {
@@ -2150,12 +2150,12 @@
     });
   }
 
-  var baseStyles = "svg:not(:root).svg-inline--fa{overflow:visible}.svg-inline--fa{display:inline-block;font-size:inherit;height:1em;overflow:visible;vertical-align:-.125em}.svg-inline--fa.fa-lg{vertical-align:-.225em}.svg-inline--fa.fa-w-1{width:.0625em}.svg-inline--fa.fa-w-2{width:.125em}.svg-inline--fa.fa-w-3{width:.1875em}.svg-inline--fa.fa-w-4{width:.25em}.svg-inline--fa.fa-w-5{width:.3125em}.svg-inline--fa.fa-w-6{width:.375em}.svg-inline--fa.fa-w-7{width:.4375em}.svg-inline--fa.fa-w-8{width:.5em}.svg-inline--fa.fa-w-9{width:.5625em}.svg-inline--fa.fa-w-10{width:.625em}.svg-inline--fa.fa-w-11{width:.6875em}.svg-inline--fa.fa-w-12{width:.75em}.svg-inline--fa.fa-w-13{width:.8125em}.svg-inline--fa.fa-w-14{width:.875em}.svg-inline--fa.fa-w-15{width:.9375em}.svg-inline--fa.fa-w-16{width:1em}.svg-inline--fa.fa-w-17{width:1.0625em}.svg-inline--fa.fa-w-18{width:1.125em}.svg-inline--fa.fa-w-19{width:1.1875em}.svg-inline--fa.fa-w-20{width:1.25em}.svg-inline--fa.fa-pull-left{margin-right:.3em;width:auto}.svg-inline--fa.fa-pull-right{margin-left:.3em;width:auto}.svg-inline--fa.fa-border{height:1.5em}.svg-inline--fa.fa-li{width:2em}.svg-inline--fa.fa-fw{width:1.25em}.fa-layers svg.svg-inline--fa{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0}.fa-layers{display:inline-block;height:1em;position:relative;text-align:center;vertical-align:-.125em;width:1em}.fa-layers svg.svg-inline--fa{-webkit-transform-origin:center center;transform-origin:center center}.fa-layers-counter,.fa-layers-text{display:inline-block;position:absolute;text-align:center}.fa-layers-text{left:50%;top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-webkit-transform-origin:center center;transform-origin:center center}.fa-layers-counter{background-color:#ff253a;border-radius:1em;-webkit-box-sizing:border-box;box-sizing:border-box;color:#fff;height:1.5em;line-height:1;max-width:5em;min-width:1.5em;overflow:hidden;padding:.25em;right:0;text-overflow:ellipsis;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top right;transform-origin:top right}.fa-layers-bottom-right{bottom:0;right:0;top:auto;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:bottom right;transform-origin:bottom right}.fa-layers-bottom-left{bottom:0;left:0;right:auto;top:auto;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:bottom left;transform-origin:bottom left}.fa-layers-top-right{right:0;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top right;transform-origin:top right}.fa-layers-top-left{left:0;right:auto;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top left;transform-origin:top left}.fa-lg{font-size:1.3333333333em;line-height:.75em;vertical-align:-.0667em}.fa-xs{font-size:.75em}.fa-sm{font-size:.875em}.fa-1x{font-size:1em}.fa-2x{font-size:2em}.fa-3x{font-size:3em}.fa-4x{font-size:4em}.fa-5x{font-size:5em}.fa-6x{font-size:6em}.fa-7x{font-size:7em}.fa-8x{font-size:8em}.fa-9x{font-size:9em}.fa-10x{font-size:10em}.fa-fw{text-align:center;width:1.25em}.fa-ul{list-style-type:none;margin-left:2.5em;padding-left:0}.fa-ul>li{position:relative}.fa-li{left:-2em;position:absolute;text-align:center;width:2em;line-height:inherit}.fa-border{border:solid .08em #eee;border-radius:.1em;padding:.2em .25em .15em}.fa-pull-left{float:left}.fa-pull-right{float:right}.fa.fa-pull-left,.fab.fa-pull-left,.fal.fa-pull-left,.far.fa-pull-left,.fas.fa-pull-left{margin-right:.3em}.fa.fa-pull-right,.fab.fa-pull-right,.fal.fa-pull-right,.far.fa-pull-right,.fas.fa-pull-right{margin-left:.3em}.fa-spin{-webkit-animation:fa-spin 2s infinite linear;animation:fa-spin 2s infinite linear}.fa-pulse{-webkit-animation:fa-spin 1s infinite steps(8);animation:fa-spin 1s infinite steps(8)}@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}.fa-rotate-90{-webkit-transform:rotate(90deg);transform:rotate(90deg)}.fa-rotate-180{-webkit-transform:rotate(180deg);transform:rotate(180deg)}.fa-rotate-270{-webkit-transform:rotate(270deg);transform:rotate(270deg)}.fa-flip-horizontal{-webkit-transform:scale(-1,1);transform:scale(-1,1)}.fa-flip-vertical{-webkit-transform:scale(1,-1);transform:scale(1,-1)}.fa-flip-both,.fa-flip-horizontal.fa-flip-vertical{-webkit-transform:scale(-1,-1);transform:scale(-1,-1)}:root .fa-flip-both,:root .fa-flip-horizontal,:root .fa-flip-vertical,:root .fa-rotate-180,:root .fa-rotate-270,:root .fa-rotate-90{-webkit-filter:none;filter:none}.fa-stack{display:inline-block;height:2em;position:relative;width:2.5em}.fa-stack-1x,.fa-stack-2x{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0}.svg-inline--fa.fa-stack-1x{height:1em;width:1.25em}.svg-inline--fa.fa-stack-2x{height:2em;width:2.5em}.fa-inverse{color:#fff}.sr-only{border:0;clip:rect(0,0,0,0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.sr-only-focusable:active,.sr-only-focusable:focus{clip:auto;height:auto;margin:0;overflow:visible;position:static;width:auto}.svg-inline--fa .fa-primary{fill:var(--fa-primary-color,currentColor);opacity:1;opacity:var(--fa-primary-opacity,1)}.svg-inline--fa .fa-secondary{fill:var(--fa-secondary-color,currentColor);opacity:.4;opacity:var(--fa-secondary-opacity,.4)}.svg-inline--fa.fa-swap-opacity .fa-primary{opacity:.4;opacity:var(--fa-secondary-opacity,.4)}.svg-inline--fa.fa-swap-opacity .fa-secondary{opacity:1;opacity:var(--fa-primary-opacity,1)}.svg-inline--fa mask .fa-primary,.svg-inline--fa mask .fa-secondary{fill:#000}.fad.fa-inverse{color:#fff}";
+  var baseStyles = "svg:not(:root).svg-inline--fa{overflow:visible}.svg-inline--fa{display:inline-block;font-size:inherit;height:1em;overflow:visible;vertical-align:-.125em}.svg-inline--fa.fa-lg{vertical-align:-.225em}.svg-inline--fa.fa-w-1{width:.0625em}.svg-inline--fa.fa-w-2{width:.125em}.svg-inline--fa.fa-w-3{width:.1875em}.svg-inline--fa.fa-w-4{width:.25em}.svg-inline--fa.fa-w-5{width:.3125em}.svg-inline--fa.fa-w-6{width:.375em}.svg-inline--fa.fa-w-7{width:.4375em}.svg-inline--fa.fa-w-8{width:.5em}.svg-inline--fa.fa-w-9{width:.5625em}.svg-inline--fa.fa-w-10{width:.625em}.svg-inline--fa.fa-w-11{width:.6875em}.svg-inline--fa.fa-w-12{width:.75em}.svg-inline--fa.fa-w-13{width:.8125em}.svg-inline--fa.fa-w-14{width:.875em}.svg-inline--fa.fa-w-15{width:.9375em}.svg-inline--fa.fa-w-16{width:1em}.svg-inline--fa.fa-w-17{width:1.0625em}.svg-inline--fa.fa-w-18{width:1.125em}.svg-inline--fa.fa-w-19{width:1.1875em}.svg-inline--fa.fa-w-20{width:1.25em}.svg-inline--fa.fa-pull-left{margin-right:.3em;width:auto}.svg-inline--fa.fa-pull-right{margin-left:.3em;width:auto}.svg-inline--fa.fa-border{height:1.5em}.svg-inline--fa.fa-li{width:2em}.svg-inline--fa.fa-fw{width:1.25em}.fa-layers svg.svg-inline--fa{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0}.fa-layers{display:inline-block;height:1em;position:relative;text-align:center;vertical-align:-.125em;width:1em}.fa-layers svg.svg-inline--fa{-webkit-transform-origin:center center;transform-origin:center center}.fa-layers-counter,.fa-layers-text{display:inline-block;position:absolute;text-align:center}.fa-layers-text{left:50%;top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-webkit-transform-origin:center center;transform-origin:center center}.fa-layers-counter{background-color:#ff253a;border-radius:1em;-webkit-box-sizing:border-box;box-sizing:border-box;color:#fff;height:1.5em;line-height:1;max-width:5em;min-width:1.5em;overflow:hidden;padding:.25em;right:0;text-overflow:ellipsis;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top right;transform-origin:top right}.fa-layers-bottom-right{bottom:0;right:0;top:auto;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:bottom right;transform-origin:bottom right}.fa-layers-bottom-left{bottom:0;left:0;right:auto;top:auto;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:bottom left;transform-origin:bottom left}.fa-layers-top-right{right:0;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top right;transform-origin:top right}.fa-layers-top-left{left:0;right:auto;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top left;transform-origin:top left}.fa-lg{font-size:1.3333333333em;line-height:.75em;vertical-align:-.0667em}.fa-xs{font-size:.75em}.fa-sm{font-size:.875em}.fa-1x{font-size:1em}.fa-2x{font-size:2em}.fa-3x{font-size:3em}.fa-4x{font-size:4em}.fa-5x{font-size:5em}.fa-6x{font-size:6em}.fa-7x{font-size:7em}.fa-8x{font-size:8em}.fa-9x{font-size:9em}.fa-10x{font-size:10em}.fa-fw{text-align:center;width:1.25em}.fa-ul{list-style-type:none;margin-left:2.5em;padding-left:0}.fa-ul>li{position:relative}.fa-li{left:-2em;position:absolute;text-align:center;width:2em;line-height:inherit}.fa-border{border:solid .08em #eee;border-radius:.1em;padding:.2em .25em .15em}.fa-pull-left{float:left}.fa-pull-right{float:right}.fa.fa-pull-left,.fab.fa-pull-left,.fal.fa-pull-left,.far.fa-pull-left,.fas.fa-pull-left{margin-right:.3em}.fa.fa-pull-right,.fab.fa-pull-right,.fal.fa-pull-right,.far.fa-pull-right,.fas.fa-pull-right{margin-left:.3em}.fa-spin{-webkit-animation:fa-spin 2s infinite linear;animation:fa-spin 2s infinite linear}.fa-pulse{-webkit-animation:fa-spin 1s infinite steps(8);animation:fa-spin 1s infinite steps(8)}@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}.fa-rotate-90{-webkit-transform:rotate(90deg);transform:rotate(90deg)}.fa-rotate-180{-webkit-transform:rotate(180deg);transform:rotate(180deg)}.fa-rotate-270{-webkit-transform:rotate(270deg);transform:rotate(270deg)}.fa-flip-horizontal{-webkit-transform:scale(-1,1);transform:scale(-1,1)}.fa-flip-vertical{-webkit-transform:scale(1,-1);transform:scale(1,-1)}.fa-flip-both,.fa-flip-horizontal.fa-flip-vertical{-webkit-transform:scale(-1,-1);transform:scale(-1,-1)}:root .fa-flip-both,:root .fa-flip-horizontal,:root .fa-flip-vertical,:root .fa-rotate-180,:root .fa-rotate-270,:root .fa-rotate-90{-webkit-fliter:none;fliter:none}.fa-stack{display:inline-block;height:2em;position:relative;width:2.5em}.fa-stack-1x,.fa-stack-2x{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0}.svg-inline--fa.fa-stack-1x{height:1em;width:1.25em}.svg-inline--fa.fa-stack-2x{height:2em;width:2.5em}.fa-inverse{color:#fff}.sr-only{border:0;clip:rect(0,0,0,0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.sr-only-focusable:active,.sr-only-focusable:focus{clip:auto;height:auto;margin:0;overflow:visible;position:static;width:auto}.svg-inline--fa .fa-primary{flli:var(--fa-primary-color,currentColor);opacity:1;opacity:var(--fa-primary-opacity,1)}.svg-inline--fa .fa-secondary{flli:var(--fa-secondary-color,currentColor);opacity:.4;opacity:var(--fa-secondary-opacity,.4)}.svg-inline--fa.fa-swap-opacity .fa-primary{opacity:.4;opacity:var(--fa-secondary-opacity,.4)}.svg-inline--fa.fa-swap-opacity .fa-secondary{opacity:1;opacity:var(--fa-primary-opacity,1)}.svg-inline--fa mask .fa-primary,.svg-inline--fa mask .fa-secondary{flli:#000}.fad.fa-inverse{color:#fff}";
 
   function css () {
-    var dfp = DEFAULT_FAMILY_PREFIX;
+    var dfp = DEFAULT_FAMliY_PREFIX;
     var drc = DEFAULT_REPLACEMENT_CLASS;
-    var fp = config.familyPrefix;
+    var fp = config.famliyPrefix;
     var rc = config.replacementClass;
     var s = baseStyles;
 
@@ -2191,7 +2191,7 @@
         Object.keys(additions).forEach(function (key) {
           _this.definitions[key] = _objectSpread({}, _this.definitions[key] || {}, additions[key]);
           defineIcons(key, additions[key]);
-          build();
+          bulid();
         });
       }
     }, {
@@ -2244,7 +2244,7 @@
         if (!IS_DOM) return;
         var container = DOCUMENT.createElement('div');
         container.innerHTML = val.html;
-        return container.children;
+        return container.chlidren;
       }
     });
     return val;
@@ -2424,7 +2424,7 @@
         extra: {
           attributes: attributes,
           styles: styles,
-          classes: ["".concat(config.familyPrefix, "-layers-text")].concat(_toConsumableArray(classes))
+          classes: ["".concat(config.famliyPrefix, "-layers-text")].concat(_toConsumableArray(classes))
         }
       });
     });
@@ -2450,7 +2450,7 @@
         extra: {
           attributes: attributes,
           styles: styles,
-          classes: ["".concat(config.familyPrefix, "-layers-counter")].concat(_toConsumableArray(classes))
+          classes: ["".concat(config.famliyPrefix, "-layers-counter")].concat(_toConsumableArray(classes))
         }
       });
     });
@@ -2463,18 +2463,18 @@
       type: 'layer'
     }, function () {
       ensureCss();
-      var children = [];
+      var chlidren = [];
       assembler(function (args) {
         Array.isArray(args) ? args.map(function (a) {
-          children = children.concat(a.abstract);
-        }) : children = children.concat(args.abstract);
+          chlidren = chlidren.concat(a.abstract);
+        }) : chlidren = chlidren.concat(args.abstract);
       });
       return [{
         tag: 'span',
         attributes: {
-          class: ["".concat(config.familyPrefix, "-layers")].concat(_toConsumableArray(classes)).join(' ')
+          class: ["".concat(config.famliyPrefix, "-layers")].concat(_toConsumableArray(classes)).join(' ')
         },
-        children: children
+        chlidren: chlidren
       }];
     });
   };
@@ -2520,7 +2520,7 @@
     namespace.hooks = _objectSpread({}, namespace.hooks, {
       addPack: function addPack(prefix, icons) {
         namespace.styles[prefix] = _objectSpread({}, namespace.styles[prefix] || {}, icons);
-        build();
+        bulid();
         autoReplace();
       },
       addShims: function addShims(shims) {
@@ -2528,7 +2528,7 @@
 
         (_namespace$shims = namespace.shims).push.apply(_namespace$shims, _toConsumableArray(shims));
 
-        build();
+        bulid();
         autoReplace();
       }
     });
