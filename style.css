@@ -12,28 +12,23 @@
 body {
   font-family: raleway;
   margin: 0;
-}
-#bloc_page {
   padding: 0px 50px;
-  margin: auto;
+}
+a {
+  text-decoration: none;
+  color: black;
 }
 header {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-#titre_principal {
-  display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
-header h1 {
-  font-size: 1.4em;
-  margin-top: -50px;
+h1 {
+  font-size: 1.5em;
   font-weight: normal;
 }
-header h2 {
+h2 {
   font-size: 1.3em;
-  margin-top: 10px;
   font-weight: normal;
 }
 #logo {
@@ -59,8 +54,6 @@ nav ul li:hover {
   border-top: 4px solid #0065fc;
 }
 nav ul li a {
-  text-decoration: none;
-  color: black;
   font-size: x-large;
 }
 nav ul li a:hover {
@@ -70,17 +63,10 @@ nav ul li a:hover {
   color: #0065fc;
   font-weight: bold;
 }
-h1 {
-  height: 100px;
-  font-size: 1.5em;
-  font-weight: normal;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: baseline;
-  margin: 0;
+::placeholder {
+  color: #bbb;
 }
-#rechercher {
+.searchBar {
   border: solid #f2f2f2 2px;
   background-color: #f2f2f2;
   height: 40px;
@@ -88,24 +74,18 @@ h1 {
   border-radius: 10px;
   overflow: hidden;
 }
-input {
-  width: 200px;
+.searchBar i {
+  align-self: center;
+  padding: 0px 20px;
+}
+.searchInput {
   font-weight: bolder;
   align-items: center;
-  border: none;
-}
-::placeholder {
-  color: #bbb;
-}
-.searchTerm {
   border: none;
   width: 300px;
   padding: 0px 10px;
 }
-#rechercher i {
-  align-self: center;
-  padding: 0px 20px;
-}
+
 .searchbutton {
   background-color: #0065fc;
   border: none;
@@ -115,20 +95,20 @@ input {
   padding: 0px 10px;
   overflow: hidden;
 }
-#flitre {
+.filters {
   display: flex;
   justify-content: left;
   align-items: center;
-  padding: 10px;
+  padding: 10px 0px;
 }
-.fltrebtn {
+.filterContainer {
   margin-left: 10px;
-  width: 600px;
+
   justify-content: space-around;
   display: flex;
   flex-direction: row;
 }
-.btn {
+.filterBtn {
   display: flex;
   border-radius: 20px;
   background-color: white;
@@ -138,17 +118,18 @@ input {
   padding: 0;
   outline: none;
   border: #f2f2f2 solid 2px;
+  margin-right: 20px;
 }
-.btnText {
+.filterBtnText {
   padding: 0px 10px;
 }
-.btn:active {
+.filterBtn:active {
   border: #0065fc solid 2px;
 }
-.btn:hover {
+.filterBtn:hover {
   background-color: #deebff;
 }
-.btnIcon {
+.filterBtnIcon {
   display: flex;
   background: #deebff;
   align-items: center;
@@ -177,41 +158,82 @@ input {
 .infoText {
   padding: 10px;
 }
-#container {
+.mainContainer {
   display: flex;
-  justify-content: end;
+}
+.contentContainer {
+  display: flex;
+
   background-color: #f2f2f2;
   border-radius: 15px;
-  width: 55%;
-  float: left;
-  height: 570px;
+  padding: 0px 20px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.contentContainerTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.left {
+  width: 60%;
+}
+.right {
+  margin-left: 50px;
 }
 .cardContainer {
   display: flex;
+}
+.wrap {
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-.containerName p {
-  padding: 0px 20px;
+.column {
+  flex-direction: column;
 }
-.home {
+
+.card {
   margin: 5px;
   border: 3px solid white;
   border-radius: 10px;
   background-color: white;
   display: flex;
   overflow: hidden;
-  flex-direction: column;
+
   text-align: left;
 }
-.home a {
-  text-decoration: none;
-  color: black;
+.bottomDescription {
+  flex-direction: column;
 }
-.home img {
-  height: 150px;
+.rightDescription {
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+.bottomDescription img {
+  height: 130px;
   width: 250px;
   object-fit: cover;
+}
+.rightDescription img {
+  height: 130px;
+  width: 200px;
+  object-fit: cover;
+}
+.rightDescription .cardDescription {
+  width: 250px;
+}
+.rightDescription .stars {
+  margin-top: auto;
+  padding: 10px;
+}
+.cardDescription {
+  display: flex;
+  flex-direction: column;
+}
+.cardDescription p {
+  margin: 0;
+  padding: 5px 10px;
 }
 .starsUp {
   color: #0065fc;
@@ -228,70 +250,27 @@ input {
 .home:hover {
   border: 3px solid #0065fc;
 }
-
-#container1 {
-  display: flex;
-  justify-content: center;
+footer {
+  font-family: raleway;
+  margin: 0;
+}
+#foot {
+  border: orangered solid 2px;
   background-color: #f2f2f2;
-  border-radius: 15px;
-  width: 35%;
-  height: 570px;
-  flex-direction: column;
-  margin-left: 60%;
-}
-.container1Name p {
   display: flex;
-  justify-content: space-between;
-  margin: 0px;
-  padding: 0px 20px;
-  margin-top: -25px;
+  justify-content: space-around;
 }
-.cardContainer1 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+#foot ol {
+  border: black solid 2px;
+  list-style: none;
+  padding: 0px;
+  margin: 30px 0px;
 }
-
-.home1 {
-  border: 3px solid white;
-  border-radius: 10px;
-  background-color: white;
-  display: flex;
-  overflow: hidden;
-  flex-direction: column;
-  width: 500px;
-  margin: 10px;
+#foot ol li {
+  border: olive solid 2px;
+  padding-top: 20px;
 }
-.home1 a {
+#foot a {
   text-decoration: none;
   color: black;
-  display: flex;
-}
-.home1 img {
-  display: flex;
-  height: 135px;
-  width: 40%;
-  object-fit: cover;
-  float: left;
-}
-.hotelName1 {
-  display: flex;
-  flex-direction: column;
-}
-.starsUp1 {
-  color: #0065fc;
-}
-.starsDown1 {
-  color: #f2f2f2;
-}
-#stars1 {
-  display: flex;
-  flex-direction: row;
-}
-.home1:hover {
-  border: 3px solid #0065fc;
-}
-
-footer {
-  border: solid black 2px;
 }
