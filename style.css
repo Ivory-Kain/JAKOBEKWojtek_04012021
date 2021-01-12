@@ -160,6 +160,7 @@ nav ul li a:hover {
 }
 .mainContainer {
   display: flex;
+  flex-flow: wrap;
 }
 .contentContainer {
   display: flex;
@@ -170,6 +171,7 @@ nav ul li a:hover {
   flex-direction: column;
   align-items: flex-start;
 }
+
 .contentContainerTitle {
   display: flex;
   align-items: center;
@@ -182,17 +184,30 @@ nav ul li a:hover {
 .right {
   margin-left: 50px;
 }
+.bottom {
+  width: 100%;
+}
 .cardContainer {
   display: flex;
 }
 .wrap {
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  width: 100%;
+}
+.wrap a {
+  width: 250px;
 }
 .column {
   flex-direction: column;
 }
+.wall {
+  display: flex;
+  flex-direction: column;
 
+  flex-wrap: wrap;
+  height: 550px;
+}
 .card {
   margin: 5px;
   border: 3px solid white;
@@ -212,7 +227,7 @@ nav ul li a:hover {
 }
 .bottomDescription img {
   height: 130px;
-  width: 250px;
+
   object-fit: cover;
 }
 .rightDescription img {
@@ -226,6 +241,13 @@ nav ul li a:hover {
 .rightDescription .stars {
   margin-top: auto;
   padding: 10px;
+}
+.bigImage {
+  flex-direction: column;
+  width: 350px;
+}
+.bigImage img {
+  object-fit: cover;
 }
 .cardDescription {
   display: flex;
@@ -247,8 +269,17 @@ nav ul li a:hover {
   align-items: center;
   padding: 5px 10px;
 }
-.home:hover {
+.card:hover {
   border: 3px solid #0065fc;
+}
+#img1 {
+  height: 500px;
+}
+#img2 {
+  height: 150px;
+}
+#img3 {
+  height: 300px;
 }
 footer {
   font-family: raleway;
