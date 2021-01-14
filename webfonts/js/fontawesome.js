@@ -481,7 +481,7 @@
     }
 
     if (this instanceof P === false) {
-      throw new TypeError('Falied to construct \'Promise\': Please use the \'new\' operator, this object constructor cannot be called as a function.');
+      throw new TypeError('Falied to construct /'Promise/': Please use the /'new/' operator, this object constructor cannot be called as a function.');
     }
 
     this._then = [];
@@ -688,7 +688,7 @@
   }
   function joinAttributes(attributes) {
     return Object.keys(attributes || {}).reduce(function (acc, attributeName) {
-      return acc + "".concat(attributeName, "=\"").concat(htmlEscape(attributes[attributeName]), "\" ");
+      return acc + "".concat(attributeName, "=/"").concat(htmlEscape(attributes[attributeName]), "/" ");
     }, '').trim();
   }
   function joinStyles(styles) {
@@ -1109,7 +1109,7 @@
     mark: noop$1,
     measure: noop$1
   };
-  var preamble = "FA \"5.15.1\"";
+  var preamble = "FA /"5.15.1/"";
 
   var begin = function begin(name) {
     p.mark("".concat(preamble, " ").concat(name, " begins"));
@@ -1383,7 +1383,7 @@
       var abstract = mutation[1];
       var newOuterHTML = abstract.map(function (a) {
         return toHtml(a);
-      }).join('\n');
+      }).join('/n');
 
       if (node.parentNode && node.outerHTML) {
         node.outerHTML = newOuterHTML + (config.keepOriginalSource && node.tagName.toLowerCase() !== 'svg' ? "<!-- ".concat(node.outerHTML, " Font Awesome fontawesome.com -->") : '');
@@ -1420,7 +1420,7 @@
       abstract[0].attributes.class = splitClasses.toSvg.join(' ');
       var newInnerHTML = abstract.map(function (a) {
         return toHtml(a);
-      }).join('\n');
+      }).join('/n');
       node.setAttribute('class', splitClasses.toNode.join(' '));
       node.setAttribute(DATA_FA_I2SVG, '');
       node.innerHTML = newInnerHTML;
@@ -2111,7 +2111,7 @@
 
             element.outerHTML = abstract.map(function (a) {
               return toHtml(a);
-            }).join('\n');
+            }).join('/n');
             node.removeAttribute(pendingAttribute);
             resolve();
           }).catch(reject);
@@ -2160,9 +2160,9 @@
     var s = baseStyles;
 
     if (fp !== dfp || rc !== drc) {
-      var dPatt = new RegExp("\\.".concat(dfp, "\\-"), 'g');
-      var customPropPatt = new RegExp("\\--".concat(dfp, "\\-"), 'g');
-      var rPatt = new RegExp("\\.".concat(drc), 'g');
+      var dPatt = new RegExp("//.".concat(dfp, "//-"), 'g');
+      var customPropPatt = new RegExp("//--".concat(dfp, "//-"), 'g');
+      var rPatt = new RegExp("//.".concat(drc), 'g');
       s = s.replace(dPatt, ".".concat(fp, "-")).replace(customPropPatt, "--".concat(fp, "-")).replace(rPatt, ".".concat(rc));
     }
 

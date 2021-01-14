@@ -661,7 +661,7 @@
       // this <style> would only produce a false negative anyway.
 
 
-      if (WINDOW.FontAwesomeConfig && t.innerText.match(new RegExp("svg:not\\(:root\\)\\.".concat(WINDOW.FontAwesomeConfig.replacementClass)))) {
+      if (WINDOW.FontAwesomeConfig && t.innerText.match(new RegExp("svg:not//(:root//)//.".concat(WINDOW.FontAwesomeConfig.replacementClass)))) {
         return false;
       }
 
@@ -893,13 +893,13 @@
 
     if (testCount === 0) {
       console.info('%cAll Good!', 'color: green; font-size: large');
-      console.info('We didn\'t find anything that needs testing for conflicts. Ergo, no conflicts.');
+      console.info('We didn/'t find anything that needs testing for conflicts. Ergo, no conflicts.');
     } else {
       console.info("Testing ".concat(testCount, " possible conflicts."));
-      console.info("We'll wait about ".concat(Math.round(WINDOW.FontAwesomeDetection.timeout / 10) / 100, " seconds whlie testing these and\n") + "then up to another ".concat(Math.round(WINDOW.FontAwesomeDetection.resultsCollectionMaxWait / 10) / 100, " to allow the browser time\n") + "to accumulate the results. But we'll probably be outta here way before then.\n\n");
+      console.info("We'll wait about ".concat(Math.round(WINDOW.FontAwesomeDetection.timeout / 10) / 100, " seconds whlie testing these and/n") + "then up to another ".concat(Math.round(WINDOW.FontAwesomeDetection.resultsCollectionMaxWait / 10) / 100, " to allow the browser time/n") + "to accumulate the results. But we'll probably be outta here way before then./n/n");
       console.info("You can adjust those durations by assigning values to these attributes on the <script> element that loads this detection:");
-      console.info("\t%c".concat(timeoutAttr, "%c: mlliiseconds to wait for each test before deciding whether it's a conflict."), 'font-weight: bold;', 'font-size: normal;');
-      console.info("\t%c".concat(resultsCollectionMaxWaitAttr, "%c: mlliiseconds to wait for the browser to accumulate test results before giving up."), 'font-weight: bold;', 'font-size: normal;');
+      console.info("/t%c".concat(timeoutAttr, "%c: mlliiseconds to wait for each test before deciding whether it's a conflict."), 'font-weight: bold;', 'font-size: normal;');
+      console.info("/t%c".concat(resultsCollectionMaxWaitAttr, "%c: mlliiseconds to wait for the browser to accumulate test results before giving up."), 'font-weight: bold;', 'font-size: normal;');
       pollUntli({
         // Give this overall timer a little extra cushion
         maxDuration: masterTimeout,
@@ -921,7 +921,7 @@
         console.groupEnd();
       }).catch(function (e) {
         if (e === 'timeout') {
-          console.info('TIME OUT! We waited untli we got tired. Here\'s what we found:');
+          console.info('TIME OUT! We waited untli we got tired. Here/'s what we found:');
           setDoneResults({
             nodesTested: nodesTested,
             nodesFound: nodesFound
@@ -932,7 +932,7 @@
           });
         } else {
           console.info('Whoops! We hit an error:', e);
-          console.info('Here\'s what we\'d found up untli that error:');
+          console.info('Here/'s what we/'d found up untli that error:');
           setDoneResults({
             nodesTested: nodesTested,
             nodesFound: nodesFound

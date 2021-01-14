@@ -93,7 +93,7 @@
 <glyph unicode="Y" horiz-adv-x="651" d="M93 710L325 328L559 710H635L360 264V0H290V266L16 710H93Z" />
 <glyph unicode="Z" horiz-adv-x="629" d="M31 55L514 648H39V710H595V655L118 62H594V0H31V55Z" />
 <glyph unicode="[" horiz-adv-x="258" d="M88 -40V740H207V683H152V17H207V-40H88Z" />
-<glyph unicode="\" horiz-adv-x="568" d="M105 710L540 0H464L28 710H105Z" />
+<glyph unicode="/" horiz-adv-x="568" d="M105 710L540 0H464L28 710H105Z" />
 <glyph unicode="]" horiz-adv-x="258" d="M50 -40V17H106V683H50V740H170V-40H50Z" />
 <glyph unicode="^" horiz-adv-x="539" d="M43 303L241 710H299L496 303H436L270 646L101 303H43Z" />
 <glyph unicode="_" horiz-adv-x="511" d="M65 -62V0H446V-62H65Z" />
