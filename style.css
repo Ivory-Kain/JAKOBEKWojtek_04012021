@@ -203,9 +203,9 @@ nav ul li a:hover {
   flex-direction: column;
   flex-wrap: wrap;
   height: 550px;
-  align-content: space-between;
-  justify-content: flex-start;
-  padding: 0px 50px 50px 0px;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  align-items: center;
 }
 .card {
   margin: 5px;
@@ -312,22 +312,40 @@ footer {
   margin: 0;
 }
 #foot {
-  border: orangered solid 2px;
   background-color: #f2f2f2;
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
 }
-#foot ol {
-  border: black solid 2px;
-  list-style: none;
-  padding: 0px;
-  margin: 30px 0px;
+.contentFoot {
+  display: flex;
+  width: 100%;
+  padding-left: 20px;
+  justify-content: space-between;
 }
-#foot ol li {
-  border: olive solid 2px;
-  padding-top: 20px;
+
+#foot li {
+  list-style: none;
+  padding-bottom: 10px;
+}
+
+#foot ol {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.about {
+  flex-direction: column;
+  justify-content: ;
+}
+.accommodation {
+  flex-direction: column;
+  justify-content: end;
+}
+.help {
+  flex-direction: column;
+  justify-content: end;
 }
 #foot a {
-  text-decoration: none;
-  color: black;
 }
