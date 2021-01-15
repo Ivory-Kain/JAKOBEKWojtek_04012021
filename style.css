@@ -12,7 +12,6 @@
 body {
   font-family: raleway;
   margin: 0;
-  padding: 0px 50px;
 }
 a {
   text-decoration: none;
@@ -22,6 +21,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding: 0px 50px;
 }
 h1 {
   font-size: 1.5em;
@@ -39,6 +39,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   height: 100px;
+  padding: 0px 50px;
 }
 nav ul {
   display: table;
@@ -158,9 +159,10 @@ nav ul li a:hover {
 .infoText {
   padding: 10px;
 }
-.mainContainer {
+main {
   display: flex;
   flex-flow: wrap;
+  padding: 0px 50px;
 }
 .contentContainer {
   display: flex;
@@ -267,14 +269,10 @@ nav ul li a:hover {
 
 .bottom {
   background-color: white;
-  padding-left: 0px;
-  margin-left: -10px;
+  margin-top: 20px;
   width: 100%;
 }
-.bottom p {
-  margin-top: 60px;
-  margin-bottom: 20px;
-}
+
 .bigImage {
   flex-direction: column;
   width: 400px;
@@ -337,7 +335,6 @@ footer {
 
 .about {
   flex-direction: column;
-  justify-content: ;
 }
 .accommodation {
   flex-direction: column;
@@ -346,6 +343,4 @@ footer {
 .help {
   flex-direction: column;
   justify-content: end;
-}
-#foot a {
 }
