@@ -9,31 +9,23 @@
     url("raleway-v18-latin-regular.ttf") format("truetype"),
     url("raleway-v18-latin-regular.svg#Raleway") format("svg");
 }
+
 body {
   font-family: raleway;
   margin: 0;
+}
+#bloc_page {
+  width: auto;
 }
 a {
   text-decoration: none;
   color: black;
 }
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0px 50px;
-}
-h1 {
-  font-size: 1.5em;
-  font-weight: normal;
-}
-h2 {
-  font-size: 1.3em;
-  font-weight: normal;
-}
+
 #logo {
-  height: 90px;
+  width: 10%;
 }
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -45,6 +37,8 @@ nav ul {
   display: table;
   list-style: none;
   height: 100%;
+  margin: 0;
+  float: left;
 }
 nav ul li {
   display: table-cell;
@@ -60,10 +54,55 @@ nav ul li a {
 nav ul li a:hover {
   color: #0065fc;
 }
+.navigation {
+  display: flex;
+  align-items: center;
+  font-size: x-large;
+  display: table-cell;
+  padding: 0px 20px;
+  vertical-align: middle;
+  display: table;
+  list-style: none;
+  height: 100%;
+  background-color: white;
+  border: none;
+}
+
 .bold {
   color: #0065fc;
   font-weight: bold;
 }
+
+nav button {
+  font-size: x-large;
+  display: table-cell;
+  padding: 0px 20px;
+  vertical-align: middle;
+  display: table;
+  list-style: none;
+  height: 100%;
+  background-color: white;
+  border: none;
+  outline: none;
+}
+nav button:hover {
+  border-top: 4px solid #0065fc;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 50px;
+}
+h1 {
+  font-size: 1.5em;
+  font-weight: normal;
+}
+h2 {
+  font-size: 1.3em;
+  font-weight: normal;
+}
+
 ::placeholder {
   color: #bbb;
 }
@@ -163,6 +202,7 @@ main {
   display: flex;
   flex-flow: wrap;
   padding: 0px 50px;
+  justify-content: space-between;
 }
 .contentContainer {
   display: flex;
@@ -181,9 +221,6 @@ main {
 }
 .left {
   width: 60%;
-}
-.right {
-  margin-left: 50px;
 }
 
 .cardContainer {
