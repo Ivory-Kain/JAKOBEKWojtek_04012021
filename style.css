@@ -14,6 +14,7 @@ body {
   font-family: raleway;
   margin: 0;
 }
+
 #bloc_page {
   width: auto;
 }
@@ -23,7 +24,7 @@ a {
 }
 
 #logo {
-  width: 10%;
+  width: 130px;
 }
 
 nav {
@@ -55,17 +56,8 @@ nav ul li a:hover {
   color: #0065fc;
 }
 .navigation {
-  display: flex;
-  align-items: center;
-  font-size: x-large;
-  display: table-cell;
-  padding: 0px 20px;
-  vertical-align: middle;
-  display: table;
-  list-style: none;
   height: 100%;
   background-color: white;
-  border: none;
 }
 
 .bold {
@@ -75,7 +67,7 @@ nav ul li a:hover {
 
 nav button {
   font-size: x-large;
-  display: table-cell;
+
   padding: 0px 20px;
   vertical-align: middle;
   display: table;
@@ -91,12 +83,11 @@ nav button:hover {
 header {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+
   padding: 0px 50px;
 }
 h1 {
   font-size: 1.5em;
-  font-weight: normal;
 }
 h2 {
   font-size: 1.3em;
@@ -113,6 +104,7 @@ h2 {
   display: inline-flex;
   border-radius: 10px;
   overflow: hidden;
+  width: max-content;
 }
 .searchBar i {
   align-self: center;
@@ -206,7 +198,6 @@ main {
 }
 .contentContainer {
   display: flex;
-
   background-color: #f2f2f2;
   border-radius: 15px;
   padding: 0px 20px;
@@ -217,37 +208,39 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  width: auto;
 }
+
 .left {
-  width: 60%;
+  width: 50%;
+  height: fit-content;
+  flex-direction: column;
+}
+.right {
+  width: 40%;
+  height: fit-content;
+  flex-direction: column;
+  height: auto;
+}
+.column a {
+  width: auto;
 }
 
 .cardContainer {
   display: flex;
-}
-.wrap {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  height: 550px;
 }
 .wrap a {
-  width: 250px;
+  width: 30%;
 }
 .column {
   flex-direction: column;
+  display: contents;
 }
-.wall {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  height: 550px;
-  justify-content: space-around;
-  margin-bottom: 30px;
-  align-items: center;
-}
+
 .card {
-  margin: 5px;
   border: 3px solid white;
   border-radius: 10px;
   background-color: white;
@@ -262,6 +255,7 @@ main {
 .rightDescription {
   flex-direction: row;
   margin-bottom: 20px;
+  margin-left: 40px;
 }
 .bottomDescription img {
   height: 130px;
@@ -269,7 +263,7 @@ main {
   object-fit: cover;
 }
 .rightDescription img {
-  height: 130px;
+  height: 165px;
   width: 200px;
   object-fit: cover;
 }
@@ -286,7 +280,7 @@ main {
 }
 .cardDescription p {
   margin: 0;
-  padding: 5px 10px;
+  padding: 10px 10px;
 }
 .starsUp {
   color: #0065fc;
@@ -308,30 +302,89 @@ main {
   background-color: white;
   margin-top: 20px;
   width: 100%;
+  height: 650px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 50px 145px 145px 45px 100px 145px;
+  margin-bottom: 60px;
+}
+.img1 {
+  width: 600px;
+  height: 520px;
+}
+.card1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 7;
+}
+.img2 {
+  width: 600px;
+  height: 275px;
+}
+.card2 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 5;
+}
+.img3 {
+  width: 600px;
+  height: 185px;
+}
+.card3 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 5;
+  grid-row-end: 7;
 }
 
-.bigImage {
+.img4 {
+  width: 600px;
+  height: 520px;
+}
+.card4 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 7;
+}
+.img5 {
+  width: 600px;
+  height: 230px;
+}
+.card5 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+.img6 {
+  width: 600px;
+  height: 230px;
+}
+.card6 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 4;
+  grid-row-end: 7;
+}
+
+.cardBigImage {
   flex-direction: column;
-  width: 400px;
+  width: auto;
   border: #f2f2f2 solid 3px;
   margin-top: 0px;
   box-shadow: #f2f2f2 5px 5px 5px;
 }
-.bigImage img {
+.cardBigImage:hover {
+  border: #0065fc solid 3px;
+}
+.cardBigImage img {
   object-fit: cover;
 }
-.img1 {
-  height: 465px;
-}
-.img2 {
-  height: 250px;
-}
-.img3 {
-  height: 135px;
-}
-.img4 {
-  height: 190px;
-}
+
 .cardBigImageDescription {
   height: 50px;
   display: flex;
