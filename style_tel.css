@@ -1,5 +1,14 @@
 @media screen and (max-width: 320px) {
   #logo {
-    width: 120px;
+    width: 130px;
+  }
+
+  header {
+    padding-left: 20px;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-around;
   }
 }
