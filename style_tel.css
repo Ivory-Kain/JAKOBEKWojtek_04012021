@@ -1,6 +1,8 @@
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 768px) {
   #logo {
     width: 100px;
+    padding: 0 20px;
+    margin-top: 10px;
   }
   header {
     display: grid;
@@ -19,12 +21,19 @@
     display: grid;
     grid-template-columns: 160px 160px;
     grid-template-rows: auto auto;
+    height: 120px;
+  }
+  nav ul li a {
+    font-size: initial;
+  }
+  .bold {
+    font-size: 17px;
   }
 
   .navigation {
     display: grid;
     grid-template-columns: 160px 160px;
-    grid-template-rows: auto auto;
+    grid-template-rows: 55px auto;
   }
   .navigation {
     grid-column-start: 1;
@@ -42,18 +51,38 @@
     padding: 0;
     margin: 0;
   }
+  nav ul li:hover {
+    border-bottom: 2px solid #0065fc;
+    border-top: none;
+  }
   button {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
   }
+  nav button {
+    font-size: x-large;
+    display: flex;
+    list-style: none;
+    border: 0;
+    outline: 0;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-top: 5px;
+  }
+  nav button:hover {
+    border: none;
+  }
+
   h1 {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 3;
     grid-row-end: 4;
     background: none;
+    padding: 0 20px;
+    font-size: larger;
   }
   h2 {
     grid-column-start: 1;
@@ -61,23 +90,141 @@
     grid-row-start: 4;
     grid-row-end: 5;
     background: none;
+    padding: 0 20px;
+    font-size: small;
+    margin-bottom: 30px;
+    margin-top: 0;
   }
   .searchBar {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 5;
     grid-row-end: 6;
+    border: solid #f2f2f2 2px;
+    background-color: #f2f2f2;
+    height: 40px;
+    display: inline-flex;
+    border-radius: 10px;
+    overflow: hidden;
+    width: auto;
+    margin: 0 20px;
   }
+  .searchbutton i {
+    display: block;
+  }
+  .searchbutton strong {
+    display: none;
+  }
+
   .filters {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 6;
     grid-row-end: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: inherit;
+  }
+  .filters p {
+    padding: 0 20px;
+  }
+  .filterContainer {
+    margin-left: 0;
+    justify-content: start;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 150px;
+    align-content: center;
+    padding: 0 20px;
   }
   #info {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 10;
     grid-row-end: 11;
+    padding: 0 20px;
+    font-size: 12px;
+  }
+  .filterBtn {
+    margin-bottom: 15px;
+  }
+  .searchBar i {
+    padding: 0 15px;
+  }
+  .left,
+  .right {
+    width: 320px;
+    height: fit-content;
+    flex-direction: column;
+  }
+  .contentContainer.right {
+    order: -1;
+  }
+  .contentContainerTitle,
+  main {
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+  }
+  .cardContainer {
+    display: flex;
+
+    height: auto;
+    flex-direction: column;
+    width: 280px;
+    padding-left: 20px;
+  }
+  .contentContainerTitle {
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 0 20px 0 20px;
+  }
+  .wrap a {
+    width: 280px;
+  }
+  .bottomDescription img {
+    height: 115px;
+  }
+  .bottomCard {
+    display: block;
+  }
+  .bottomCard > a {
+    height: 100px;
+  }
+  .cardDescription p {
+    margin: 0;
+    padding: 5px 10px;
+  }
+  .bottomDescription {
+    margin-bottom: 20px;
+  }
+  .left {
+    background: none;
+  }
+  .right {
+    padding: 0;
+  }
+
+  .card {
+    border: 3px solid #f2f2f2;
+    box-shadow: #f2f2f2 3px 3px 3px;
+  }
+  .contentContainer {
+    border-radius: 0;
+    padding: 0;
+  }
+  .rightDescription img {
+    height: 120px;
+    width: 40%;
+    object-fit: cover;
+  }
+  .cardBigImage1 img,
+  .cardBigImage2 img,
+  .cardBigImage3 img,
+  .cardBigImage4 img,
+  .cardBigImage5 img,
+  .cardBigImage6 img {
+    height: 150px;
   }
 }
