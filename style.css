@@ -142,6 +142,9 @@ h2 {
   padding: 0 10px;
   overflow: hidden;
 }
+.searchbutton i {
+  display: none;
+}
 
 .filters {
   display: flex;
