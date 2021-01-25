@@ -6,7 +6,7 @@
   }
 
   #bloc_page {
-    width: 100%;
+    width: 360px;
   }
 
   header {
@@ -305,7 +305,7 @@
   }
 
   #bloc_page {
-    width: 100%;
+    width: 375px;
   }
 
   header {
@@ -585,6 +585,7 @@
   .cardBigImage5 img,
   .cardBigImage6 img {
     height: 130px;
+    width: 100%;
   }
 
   .cardBigImage1,
