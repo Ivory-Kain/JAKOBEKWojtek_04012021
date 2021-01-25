@@ -1,9 +1,10 @@
-@media screen and (min-width: 426px) and (max-width: 768px) {
+@media screen and (min-width: 376px) and (max-width: 768px) {
   #logo {
     width: 100px;
     padding: 0 20px;
     margin-top: 10px;
   }
+
   #bloc_page {
     width: 100%;
   }
@@ -15,15 +16,20 @@
 
   h1,
   h2 {
-    background: 0 0;
     text-align: center;
   }
 
   button,
   nav img {
+    grid-row-start: 1;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-end: 2;
+  }
+
+  nav img {
     grid-column-start: 1;
     grid-column-end: 2;
-    grid-row-start: 1;
     grid-row-end: 1;
   }
 
@@ -60,6 +66,7 @@
     padding: 0;
     margin: 0;
   }
+
   nav button,
   nav ul li {
     padding: 0 20px;
@@ -71,12 +78,6 @@
   nav ul li:hover {
     border-bottom: 2px solid #0065fc;
     border-top: none;
-  }
-
-  button {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-end: 2;
   }
 
   nav button {
@@ -126,10 +127,8 @@
     border: solid #f2f2f2 2px;
     background-color: #f2f2f2;
     height: 40px;
-
     border-radius: 10px;
     overflow: hidden;
-
     margin: 0 192px;
   }
 
@@ -146,16 +145,21 @@
     display: none;
   }
 
+  .filterContainer,
+  .filters {
+    display: flex;
+    flex-direction: row;
+  }
+
   .filters {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 6;
     grid-row-end: 10;
-    display: flex;
-    flex-direction: row;
     align-items: center;
     height: 80px;
   }
+
   .filters p {
     margin-bottom: 30px;
   }
@@ -170,10 +174,7 @@
   .filterContainer {
     margin-left: 0;
     justify-content: start;
-    display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-
     align-content: center;
     padding: 0 20px;
   }
@@ -197,22 +198,37 @@
 
   .left,
   .right {
-    width: 320px;
+    width: 768px;
     height: fit-content;
     flex-direction: column;
   }
 
+  .rightDescription .cardDescription {
+    align-items: center;
+  }
+
+  .left p {
+    margin-left: 20px;
+  }
+
   .contentContainer.right {
-    order: -1;
     width: 95%;
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  .contentContainer.left {
+    margin-top: 30px;
   }
 
   .cardContainer,
   main {
     display: flex;
     flex-direction: column;
+  }
+
+  .cardContainerTitle {
+    padding-left: 20px;
   }
 
   main {
@@ -225,12 +241,14 @@
 
   .contentContainerTitle {
     justify-content: space-between;
-    flex-direction: row;
-    display: flex;
   }
 
   .wrap a {
-    width: 280px;
+    width: 354px;
+  }
+  .wrap {
+    display: flex;
+    flex-direction: row;
   }
 
   .bottomDescription img {
@@ -238,12 +256,15 @@
   }
 
   .bottomCard {
-    display: block;
+    display: flex;
     padding: 0 20px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 768px;
   }
 
   .bottomCard > a {
-    height: 100px;
+    height: 100%;
   }
 
   .cardDescription p {
@@ -286,6 +307,7 @@
   .cardBigImage5 img,
   .cardBigImage6 img {
     height: 130px;
+    width: 354px;
   }
 
   .cardBigImage1,
@@ -294,13 +316,14 @@
   .cardBigImage4,
   .cardBigImage5,
   .cardBigImage6 {
-    width: 280px;
+    width: 354px;
     margin-bottom: 20px;
   }
 
   .contentFoot {
     padding-top: 20px;
     justify-content: space-between;
+    align-items: end;
   }
 
   #foot {
