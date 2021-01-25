@@ -129,7 +129,7 @@
     height: 40px;
     border-radius: 10px;
     overflow: hidden;
-    margin: 0 192px;
+    margin: 0 auto;
   }
 
   .searchbutton {
@@ -212,9 +212,10 @@
   }
 
   .contentContainer.right {
-    width: 95%;
+    width: 100%;
     padding-left: 20px;
     padding-right: 20px;
+    box-sizing: border-box;
   }
 
   .contentContainer.left {
@@ -257,10 +258,11 @@
 
   .bottomCard {
     display: flex;
-    padding: 0 20px;
+    justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
     width: 768px;
+    box-sizing: border-box;
   }
 
   .bottomCard > a {
@@ -324,6 +326,7 @@
     padding-top: 20px;
     justify-content: space-between;
     align-items: end;
+    box-sizing: border-box;
   }
 
   #foot {
